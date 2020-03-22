@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/XilinxPrj/Football/Football.xst" -ofn "C:/XilinxPrj/Football/Football.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 Football.ngc Football.ngd  
+xst -intstyle ise -ifn "C:/XilinxPrj/Football/Football.xst" -ofn "C:/XilinxPrj/Football/Football.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 Football.ngc Football.ngd  
+xst -intstyle ise -ifn "C:/XilinxPrj/Football/Football.xst" -ofn "C:/XilinxPrj/Football/Football.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 Football.ngc Football.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Football_map.ncd Football.ngd Football.pcf 
+par -w -intstyle ise -ol high -t 1 Football_map.ncd Football.ncd Football.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Football.twx Football.ncd -o Football.twr Football.pcf 
+bitgen -intstyle ise -f Football.ut Football.ncd 

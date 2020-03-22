@@ -1,0 +1,6 @@
+AR displayer behavioral C:/XilinxPrj/Football/Displayer.vhd sub00/vhpl03 1583768277
+AR gamemanager behavioral C:/XilinxPrj/Football/GameManager.vhd sub00/vhpl01 1583768275
+EN football NULL C:/XilinxPrj/Football/Football.vhf sub00/vhpl04 1583768278
+EN displayer NULL C:/XilinxPrj/Football/Displayer.vhd sub00/vhpl02 1583768276
+EN gamemanager NULL C:/XilinxPrj/Football/GameManager.vhd sub00/vhpl00 1583768274
+AR football behavioral C:/XilinxPrj/Football/Football.vhf sub00/vhpl05 1583768279

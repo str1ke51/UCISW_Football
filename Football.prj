@@ -1,0 +1,3 @@
+vhdl work "GameManager.vhd"
+vhdl work "Displayer.vhd"
+vhdl work "Football.vhf"

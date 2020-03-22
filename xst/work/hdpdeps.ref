@@ -1,0 +1,18 @@
+V3 16
+FL C:/XilinxPrj/Football/Displayer.vhd 2020/03/09.16:37:40 P.20131013
+EN work/Displayer 1583768276 FL C:/XilinxPrj/Football/Displayer.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Displayer/Behavioral 1583768277 \
+      FL C:/XilinxPrj/Football/Displayer.vhd EN work/Displayer 1583768276
+FL C:/XilinxPrj/Football/Football.vhf 2020/03/09.16:34:17 P.20131013
+EN work/Football 1583768278 FL C:/XilinxPrj/Football/Football.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/Football/BEHAVIORAL 1583768279 \
+      FL C:/XilinxPrj/Football/Football.vhf EN work/Football 1583768278 CP PS2_Rx \
+      CP GameManager CP Displayer CP LCD1x64 CP VGAtxt48x20 CP BUF
+FL C:/XilinxPrj/Football/GameManager.vhd 2020/03/09.15:52:49 P.20131013
+EN work/GameManager 1583768274 FL C:/XilinxPrj/Football/GameManager.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/GameManager/Behavioral 1583768275 \
+      FL C:/XilinxPrj/Football/GameManager.vhd EN work/GameManager 1583768274
