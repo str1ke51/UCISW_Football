@@ -1,0 +1,2 @@
+vhdl work "GameManager.vhd"
+vhdl work "GameManagerTestBench.vhd"

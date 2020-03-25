@@ -25,9 +25,7 @@
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="Displayer.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Displayer.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="Displayer.vhi"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DisplayerTestBench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DisplayerTestBench_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="DisplayerTestBench_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Football.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Football.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="Football.jhd"/>
@@ -69,6 +67,10 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Football_xst.xrpt"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="GameManager.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="GameManager.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GameManagerTestBench_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="GameManagerTestBench_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="GameManagerTestBench_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="GameManagerTestBench_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -95,67 +97,54 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1584559803" xil_pn:in_ck="8409762368059077951" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1584559803">
+    <transform xil_pn:end_ts="1585165959" xil_pn:in_ck="4846041173022905988" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1585165959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Displayer.vhd"/>
       <outfile xil_pn:name="DisplayerTestBench.vhd"/>
       <outfile xil_pn:name="GameManager.vhd"/>
+      <outfile xil_pn:name="GameManagerTestBench.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1584557737" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7712269929742059940" xil_pn:start_ts="1584557737">
+    <transform xil_pn:end_ts="1585165084" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1423629501040478628" xil_pn:start_ts="1585165084">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1584557739" xil_pn:in_ck="3713271847729852127" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4278640650230196382" xil_pn:start_ts="1584557737">
+    <transform xil_pn:end_ts="1585165086" xil_pn:in_ck="3713271847729852127" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9134255447717151258" xil_pn:start_ts="1585165084">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Football.vhf"/>
     </transform>
     <transform xil_pn:end_ts="1584557257" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6433233202203288328" xil_pn:start_ts="1584557257">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1584559803" xil_pn:in_ck="1900654864280448484" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1584559803">
+    <transform xil_pn:end_ts="1585165959" xil_pn:in_ck="8092487021139463721" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1585165959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Displayer.vhd"/>
       <outfile xil_pn:name="DisplayerTestBench.vhd"/>
       <outfile xil_pn:name="Football.vhf"/>
       <outfile xil_pn:name="GameManager.vhd"/>
+      <outfile xil_pn:name="GameManagerTestBench.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1584559806" xil_pn:in_ck="1900654864280448484" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1448597860512103201" xil_pn:start_ts="1584559803">
+    <transform xil_pn:end_ts="1585165963" xil_pn:in_ck="8092487021139463721" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5679197062184502927" xil_pn:start_ts="1585165959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="DisplayerTestBench_beh.prj"/>
-      <outfile xil_pn:name="DisplayerTestBench_isim_beh.exe"/>
+      <outfile xil_pn:name="GameManagerTestBench_beh.prj"/>
+      <outfile xil_pn:name="GameManagerTestBench_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1584559806" xil_pn:in_ck="630919833532463676" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="9158650673004684014" xil_pn:start_ts="1584559806">
+    <transform xil_pn:end_ts="1585165963" xil_pn:in_ck="-3969953317902972800" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1692666320119849982" xil_pn:start_ts="1585165963">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="DisplayerTestBench_isim_beh.wdb"/>
+      <outfile xil_pn:name="GameManagerTestBench_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>

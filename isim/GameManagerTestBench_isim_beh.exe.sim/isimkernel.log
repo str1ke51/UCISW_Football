@@ -1,0 +1,29 @@
+Command line:
+   GameManagerTestBench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56464
+
+Wed Mar 25 20:52:45 2020
+
+
+ Elaboration Time: 0.109375 sec
+
+ Current Memory Usage: 5815.37 Meg
+
+ Total Signals          : 22
+ Total Nets             : 43
+ Total Signal Drivers   : 8
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 8
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 531
+Total Line Count : 24
+
+ Total Simulation Time: 0.5 sec
+
+ Current Memory Usage: 4714.33 Meg
+
+Wed Mar 25 21:01:31 2020
+

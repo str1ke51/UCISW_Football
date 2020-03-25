@@ -22,7 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -39,13 +39,20 @@ entity GameManager is
            G1_Score : out  STD_LOGIC_VECTOR (2 downto 0);
            G2_Score : out  STD_LOGIC_VECTOR (2 downto 0);
            Ball_Pos : out  STD_LOGIC_VECTOR (7 downto 0);
-           Time_Left : out  STD_LOGIC_VECTOR (7 downto 0);
-           Result : out  STD_LOGIC_VECTOR (1 downto 0));
+           Time_Left : out  STD_LOGIC_VECTOR (7 downto 0);		-- DONE
+           Result : out  STD_LOGIC_VECTOR (1 downto 0));			-- DONE
 end GameManager;
 
 architecture Behavioral of GameManager is
 
+shared variable Score_1 : integer := 0;
+shared variable Score_2 : integer := 0;
+shared variable GameTime : integer := 0;
+shared variable GameTimeLeft : integer := 255;
+
 begin
+-- DOMYŒLNE WARTOŒCI
+	
 	G1_Pos <= "0000";
 	G2_Pos <= "0000";
 	
@@ -53,8 +60,55 @@ begin
 	G2_Score <= "000";
 	
 	Ball_Pos <= "00000000";
-	Time_Left <= "00000000";
-	Result <= "00";
+	
+-- RESET GRY
+--	ResetGameManager : process (RST)
+--	begin
+--		if RST = '1' then
+--			Time_Left <= "11111111";
+--			G1_Pos <= "0000";
+--			G2_Pos <= "0000";
+--	
+--			G1_Score <= "000";
+--			G2_Score <= "000";
+--	
+--			Ball_Pos <= "00000000";
+--			Result <= "00";
+			
+--			Score_1 := 0;
+--			Score_2 := 0;
+--			GameTime := 0;
+--			GameTimeLeft := 255;
+--		end if;
+--	end process ResetGameManager;
 
+-- ZDARZENIA CZASOWE
+	UpdateTime : process (Clk_XT)
+	begin
+		if rising_edge(Clk_XT) then
+			GameTime := GameTime + 1;
+			
+			-- 100 mln
+			if GameTime > 3 AND GameTimeLeft > 0 then
+				GameTime := 0;
+				GameTimeLeft := GameTimeLeft - 1;
+				Time_Left <= std_logic_vector( to_unsigned( GameTimeLeft, 8 ) );
+				
+				-- Koniec czasu - sprawdz wynik
+				if GameTimeLeft = 0 then
+					if Score_1 > Score_2 then
+						Result <= "01";
+					elsif Score_1 < Score_2 then
+						Result <= "10";
+					else
+						Result <= "11";
+					end if;
+				else
+					Result <= "00";
+				end if;
+			end if;
+		end if;
+	end process UpdateTime;
+	
 end Behavioral;
 

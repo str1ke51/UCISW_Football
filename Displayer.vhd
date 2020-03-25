@@ -73,9 +73,9 @@ begin
 		Seconds := Seconds_Left mod 60;
 		Minutes := Seconds_Left / 60;
 		
-		Seconds_Ten_Display := std_logic_vector(to_signed(Seconds / 10, 4));
-		Seconds_One_Display := std_logic_vector(to_signed(Seconds mod 10, 4));
-		Minutes_Display := std_logic_vector(to_signed(Minutes, 4));
+		Seconds_Ten_Display := std_logic_vector(to_unsigned(Seconds / 10, 4));
+		Seconds_One_Display := std_logic_vector(to_unsigned(Seconds mod 10, 4));
+		Minutes_Display := std_logic_vector(to_unsigned(Minutes, 4));
 		
 		Line(15 downto 12) <= Minutes_Display;
 		Line(7 downto 4) <= Seconds_Ten_Display;

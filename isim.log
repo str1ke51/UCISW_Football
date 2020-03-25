@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Kacper\Desktop\Football\DisplayerTestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Kacper/Desktop/Football/DisplayerTestBench_isim_beh.wdb 
+Running: C:\Users\Kacper\Desktop\Football\GameManagerTestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Kacper/Desktop/Football/GameManagerTestBench_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,23 +11,13 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 70 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 80 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 170 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 180 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 270 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 280 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 370 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 380 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 470 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 480 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 570 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 580 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 670 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 680 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 770 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 780 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 870 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 880 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 970 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
-at 980 ns(1), Instance /displayertestbench/uut/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
