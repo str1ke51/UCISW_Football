@@ -29,7 +29,7 @@ char *ieee_p_1242562249_sub_180853171_1035706684(char *, char *, int , int );
 unsigned char ieee_p_2592010699_sub_1744673427_503743352(char *, char *, unsigned int , unsigned int );
 
 
-static void work_a_0826032326_3212880686_p_0(char *t0)
+static void work_a_0914643290_3212880686_p_0(char *t0)
 {
     char t20[16];
     char *t1;
@@ -104,11 +104,14 @@ LAB7:    xsi_set_current_line(84, ng0);
     xsi_driver_first_trans_fast_port(t5);
 
 LAB6:    xsi_set_current_line(87, ng0);
-    t1 = (t0 + 1512U);
-    t2 = *((char **)t1);
-    t3 = *((unsigned char *)t2);
-    t4 = (t3 == (unsigned char)3);
-    if (t4 != 0)
+    t1 = (t0 + 1472U);
+    t4 = xsi_signal_has_event(t1);
+    if (t4 == 1)
+        goto LAB22;
+
+LAB23:    t3 = (unsigned char)0;
+
+LAB24:    if (t3 != 0)
         goto LAB19;
 
 LAB21:
@@ -210,15 +213,15 @@ LAB17:    xsi_set_current_line(79, ng0);
     goto LAB15;
 
 LAB19:    xsi_set_current_line(88, ng0);
-    t1 = (t0 + 3648U);
-    t5 = *((char **)t1);
-    t6 = *((int *)t5);
-    t1 = (t0 + 4008U);
-    t8 = *((char **)t1);
-    t1 = (t8 + 0);
-    *((int *)t1) = t6;
-    t9 = (t0 + 3952U);
-    xsi_variable_act(t9);
+    t2 = (t0 + 3648U);
+    t8 = *((char **)t2);
+    t6 = *((int *)t8);
+    t2 = (t0 + 4008U);
+    t9 = *((char **)t2);
+    t2 = (t9 + 0);
+    *((int *)t2) = t6;
+    t14 = (t0 + 3952U);
+    xsi_variable_act(t14);
     xsi_set_current_line(89, ng0);
     t1 = (t0 + 4128U);
     t2 = *((char **)t1);
@@ -251,9 +254,16 @@ LAB19:    xsi_set_current_line(88, ng0);
     xsi_driver_first_trans_fast_port(t5);
     goto LAB20;
 
+LAB22:    t2 = (t0 + 1512U);
+    t5 = *((char **)t2);
+    t10 = *((unsigned char *)t5);
+    t12 = (t10 == (unsigned char)3);
+    t3 = t12;
+    goto LAB24;
+
 }
 
-static void work_a_0826032326_3212880686_p_1(char *t0)
+static void work_a_0914643290_3212880686_p_1(char *t0)
 {
     char *t1;
     unsigned char t2;
@@ -324,9 +334,9 @@ LAB5:    xsi_set_current_line(107, ng0);
 }
 
 
-extern void work_a_0826032326_3212880686_init()
+extern void work_a_0914643290_3212880686_init()
 {
-	static char *pe[] = {(void *)work_a_0826032326_3212880686_p_0,(void *)work_a_0826032326_3212880686_p_1};
-	xsi_register_didat("work_a_0826032326_3212880686", "isim/GameManagerTestBench_isim_beh.exe.sim/work/a_0826032326_3212880686.didat");
+	static char *pe[] = {(void *)work_a_0914643290_3212880686_p_0,(void *)work_a_0914643290_3212880686_p_1};
+	xsi_register_didat("work_a_0914643290_3212880686", "isim/GameManager_isim_beh.exe.sim/work/a_0914643290_3212880686.didat");
 	xsi_register_executes(pe);
 }

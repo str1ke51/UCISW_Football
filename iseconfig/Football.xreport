@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-25T19:42:38</DateModified>
+  <DateModified>2020-04-21T11:34:15</DateModified>
   <ModuleName>Football</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Kacper/Desktop/Football/iseconfig/Football.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Kacper/Desktop/Football\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/KM/Desktop/UCISW_Football/iseconfig/Football.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/KM/Desktop/UCISW_Football\</ImplementationReportsDirectory>
   <DateInitialized>2020-03-17T17:43:23</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

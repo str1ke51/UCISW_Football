@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Kacper/Desktop/Football/Displayer.vhd";
+static const char *ng0 = "C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd";
 extern char *IEEE_P_1242562249;
 
 char *ieee_p_1242562249_sub_180853171_1035706684(char *, char *, int , int );
@@ -43,7 +43,7 @@ static void work_a_0806393646_3212880686_p_0(char *t0)
     unsigned int t11;
 
 LAB0:    xsi_set_current_line(67, ng0);
-    t1 = (t0 + 12244);
+    t1 = (t0 + 12316);
     t3 = (t0 + 8120);
     t4 = (t3 + 56U);
     t5 = *((char **)t4);
@@ -74,7 +74,7 @@ LAB0:    xsi_set_current_line(67, ng0);
     xsi_set_current_line(72, ng0);
     t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 12052U);
+    t1 = (t0 + 12124U);
     t8 = ieee_p_1242562249_sub_2271993008_1035706684(IEEE_P_1242562249, t2, t1);
     t3 = (t0 + 3888U);
     t4 = *((char **)t3);
@@ -173,7 +173,7 @@ LAB0:    xsi_set_current_line(67, ng0);
     memcpy(t6, t2, 4U);
     xsi_driver_first_trans_delta(t1, 60U, 4U, 0LL);
     xsi_set_current_line(84, ng0);
-    t1 = (t0 + 12308);
+    t1 = (t0 + 12380);
     t3 = (t0 + 8184);
     t4 = (t3 + 56U);
     t5 = *((char **)t4);
@@ -208,7 +208,7 @@ static void work_a_0806393646_3212880686_p_2(char *t0)
 
 LAB0:    xsi_set_current_line(95, ng0);
 
-LAB3:    t1 = (t0 + 12324);
+LAB3:    t1 = (t0 + 12396);
     t3 = (t0 + 8248);
     t4 = (t3 + 56U);
     t5 = *((char **)t4);

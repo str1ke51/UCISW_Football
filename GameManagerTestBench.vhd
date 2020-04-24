@@ -72,7 +72,7 @@ ARCHITECTURE behavior OF GameManagerTestBench IS
    signal Result : std_logic_vector(1 downto 0);
 
    -- Clock period definitions
-   constant Clk_XT_period : time := 10 ns;
+   constant Clk_XT_period : time :=  ns;
  
 BEGIN
  
@@ -91,6 +91,7 @@ BEGIN
           Result => Result
         );
 
+
    -- Clock process definitions
    Clk_XT_process :process
    begin
@@ -104,13 +105,12 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
-
+		RST <= '0';
+      wait for 500 ns;	
+		RST <= '1';
+		wait for 300 ns;			
+		RST <= '0';
       wait for Clk_XT_period*10;
-
-      -- insert stimulus here 
-
       wait;
    end process;
 

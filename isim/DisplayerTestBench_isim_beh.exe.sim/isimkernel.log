@@ -2,14 +2,14 @@ Command line:
    DisplayerTestBench_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  56359
+     -socket  64768
 
-Wed Mar 25 20:37:14 2020
+Fri Apr 10 17:26:11 2020
 
 
- Elaboration Time: 0.09375 sec
+ Elaboration Time: 0.046875 sec
 
- Current Memory Usage: 5815.89 Meg
+ Current Memory Usage: 5175.82 Meg
 
  Total Signals          : 34
  Total Nets             : 127
@@ -21,9 +21,9 @@ Wed Mar 25 20:37:14 2020
  Total Scalar Nets and Variables : 613
 Total Line Count : 25
 
- Total Simulation Time: 0.109375 sec
+ Total Simulation Time: 0.0625 sec
 
- Current Memory Usage: 5815.89 Meg
+ Current Memory Usage: 5175.82 Meg
 
-Wed Mar 25 20:37:20 2020
+Fri Apr 10 17:26:19 2020
 
