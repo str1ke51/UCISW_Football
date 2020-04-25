@@ -38,7 +38,7 @@ entity GameManager is
            G2_Pos : out  STD_LOGIC_VECTOR (3 downto 0) := "0000";
            G1_Score : out  STD_LOGIC_VECTOR (2 downto 0) := "000";
            G2_Score : out  STD_LOGIC_VECTOR (2 downto 0) := "000";
-           Ball_Pos : out  STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+           Ball_Pos : out  STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
            Time_Left : out  STD_LOGIC_VECTOR (7 downto 0) := "11111111";		-- DONE
            Result : out  STD_LOGIC_VECTOR (1 downto 0) := "00");					-- DONE
 end GameManager;
@@ -48,12 +48,21 @@ architecture Behavioral of GameManager is
 constant CLOCK_FREQEUNCY : integer := 10;
 constant MAX_POINTS : integer := 5;
 constant MAX_GAME_TIME : integer := 255;
+constant BALL_FPS : integer := 4;
+
+constant START_BALL_X : integer := 10;
+constant START_BALL_Y : integer := 24;
+constant START_BALL_DIRECTION : std_logic_vector (2 downto 0) := "010";
 
 shared variable Score_1 : integer := 0;
 shared variable Score_2 : integer := 0;
-shared variable GameTimeLeft : integer := MAX_GAME_TIME;
 shared variable IsFinished : bit := '0';
+shared variable GameTimeLeft : integer := MAX_GAME_TIME;
 
+shared variable BallDirection : std_logic_vector (2 downto 0) := START_BALL_DIRECTION;
+shared variable ball_x : integer := START_BALL_X;
+shared variable ball_y : integer := START_BALL_Y;
+	
 signal IsGameEnded : bit := '0';
 signal SecondElapsed : bit := '0';
 signal ChangeBallPostion : bit := '0';
@@ -95,17 +104,62 @@ begin
 		
 		Time_Left <= std_logic_vector( to_unsigned( GameTimeLeft, 8 ) );
 	end process ExecuteEverySecond;
+	
+-- RUCH PI£KI
+	BallMovement : process (ChangeBallPostion, RST)
+	begin
+		-- Calculate X-axis movement
+		case BallDirection(2 downto 1) is
+			when "11" => ball_x := ball_x + 2;
+			when "10" => ball_x := ball_x + 1;
+			when "00" => ball_x := ball_x - 1;
+			when "01" => ball_x := ball_x - 2;
+			when others => ball_x := ball_x;
+		end case;
+		
+		-- Calculate Y-axis movement
+		if BallDirection(0) = '0' then
+			-- We're going up
+			ball_y := ball_y - 1;
+		else
+			-- We're going down
+			ball_y := ball_y + 1;
+		end if;
+		
+		if RST = '1' then
+			ball_x := START_BALL_X;
+			ball_y := START_BALL_Y;
+			BallDirection := START_BALL_DIRECTION;
+		end if;
+		
+		Ball_Pos(7 downto 4) <= std_logic_vector(to_unsigned(ball_x, 4));
+		Ball_Pos(3 downto 0) <= std_logic_vector(to_unsigned(ball_y, 4));
+	end process BallMovement;
+	
+-- RUCH GRACZY
+	PlayerMovement : process (RST, Data_Ready)
+	begin
+		
+	end process PlayerMovement;
 
 -- ZDARZENIA CZASOWE
 	UpdateTime : process (Clk_XT)
 	variable cyclesCount : integer := 0;
+	variable cyclesForBallCount : integer := 0;
+	
 	begin
 		if rising_edge(Clk_XT) then -- (clk'event and clk = '1') <-- not sure if here this wouldn't be more correct
 			cyclesCount := cyclesCount + 1;
+			cyclesForBallCount := cyclesForBallCount + 1;
 			
 			if cyclesCount > CLOCK_FREQEUNCY*2 then
 					cyclesCount := 0;
 					SecondElapsed <= not SecondElapsed;
+			end if;
+			
+			if cyclesForBallCount > CLOCK_FREQEUNCY*2/BALL_FPS then
+					cyclesForBallCount := 0;
+					ChangeBallPostion <= not ChangeBallPostion;
 			end if;
 		end if;
 		

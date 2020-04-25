@@ -72,7 +72,7 @@ ARCHITECTURE behavior OF GameManagerTestBench IS
    signal Result : std_logic_vector(1 downto 0);
 
    -- Clock period definitions
-   constant Clk_XT_period : time :=  ns;
+   constant Clk_XT_period : time := 5 ns;
  
 BEGIN
  
