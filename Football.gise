@@ -120,6 +120,7 @@
     <transform xil_pn:end_ts="1587816530" xil_pn:in_ck="3713271847729852127" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9134255447717151258" xil_pn:start_ts="1587816528">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <outfile xil_pn:name="Football.vhf"/>
     </transform>
     <transform xil_pn:end_ts="1584557257" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6433233202203288328" xil_pn:start_ts="1584557257">

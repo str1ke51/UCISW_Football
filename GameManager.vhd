@@ -45,11 +45,17 @@ end GameManager;
 
 architecture Behavioral of GameManager is
 
+constant FIELD_HEIGHT : integer := 20;
+constant FIELD_WIDTH : integer := 48;
+constant BARRIER_UPDOWN : integer := 1;
+constant BARRIER_LEFTRIGHT : integer := 2;
+constant GOAL_WIDTH : integer := 6;
+
 constant CLOCK_FREQEUNCY : integer := 10;
 constant MAX_POINTS : integer := 5;
 constant MAX_GAME_TIME : integer := 255;
-constant BALL_FPS : integer := 4;
 
+constant BALL_FPS : integer := 4;
 constant START_BALL_X : integer := 10;
 constant START_BALL_Y : integer := 24;
 constant START_BALL_DIRECTION : std_logic_vector (2 downto 0) := "010";
@@ -125,6 +131,16 @@ begin
 			-- We're going down
 			ball_y := ball_y + 1;
 		end if;
+		
+		-- Validate new position of the ball
+		if ball_x <= BARRIER_LEFTRIGHT then
+			ball_x := BARRIER_LEFTRIGHT + 1;
+			BallDirection(2) <= not BallDirection(2);
+		end if;
+		if ball_x >= FIELD_WIDTH - BARRIER_LEFTRIGHT then
+			ball_x := FIELD_WIDTH - BARRIER_LEFTRIGHT - 1;
+			BallDirection(2) <= not BallDirection(2);
+		end if; 
 		
 		if RST = '1' then
 			ball_x := START_BALL_X;
