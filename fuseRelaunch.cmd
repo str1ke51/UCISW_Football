@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Kacper/Desktop/UCISW_Football/GameManagerTestBench_isim_beh.exe" -prj "C:/Users/Kacper/Desktop/UCISW_Football/GameManagerTestBench_beh.prj" "work.GameManagerTestBench" 
+-intstyle "ise" -incremental -o "C:/Users/KM/Desktop/UCISW_Football/GameManager_isim_beh.exe" -prj "C:/Users/KM/Desktop/UCISW_Football/GameManager_beh.prj" "work.GameManager" 

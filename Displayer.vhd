@@ -30,8 +30,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Displayer is
-    Port ( G1_Pos : in  STD_LOGIC_VECTOR (3 downto 0);
-           G2_Pos : in  STD_LOGIC_VECTOR (3 downto 0);
+    Port ( G1_Pos : in  STD_LOGIC_VECTOR (4 downto 0);
+           G2_Pos : in  STD_LOGIC_VECTOR (4 downto 0);
            G1_Score : in  STD_LOGIC_VECTOR (2 downto 0);
            G2_Score : in  STD_LOGIC_VECTOR (2 downto 0);
            Ball_Pos : in  STD_LOGIC_VECTOR (7 downto 0);

@@ -66,7 +66,7 @@
             <line x2="384" y1="-224" y2="-224" x1="320" />
         </blockdef>
         <blockdef name="GameManager">
-            <timestamp>2020-4-25T10:49:53</timestamp>
+            <timestamp>2020-5-9T13:27:4</timestamp>
             <rect width="336" x="64" y="-448" height="448" />
             <line x2="0" y1="-416" y2="-416" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -89,7 +89,7 @@
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
         <blockdef name="Displayer">
-            <timestamp>2020-4-25T10:49:53</timestamp>
+            <timestamp>2020-5-9T13:16:25</timestamp>
             <rect width="304" x="64" y="-640" height="640" />
             <rect width="64" x="0" y="-620" height="24" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
@@ -175,17 +175,17 @@
             <blockpin signalname="Clk" name="Clk_XT" />
             <blockpin signalname="RST" name="RST" />
             <blockpin signalname="XLXN_1(7:0)" name="Data_Input(7:0)" />
-            <blockpin signalname="XLXN_3(3:0)" name="G1_Pos(3:0)" />
-            <blockpin signalname="XLXN_4(3:0)" name="G2_Pos(3:0)" />
+            <blockpin signalname="XLXN_3(3:0)" name="G1_Pos(4:0)" />
+            <blockpin signalname="XLXN_4(3:0)" name="G2_Pos(4:0)" />
             <blockpin signalname="XLXN_5(2:0)" name="G1_Score(2:0)" />
             <blockpin signalname="XLXN_6(2:0)" name="G2_Score(2:0)" />
-            <blockpin signalname="XLXN_7(7:0)" name="Ball_Pos(7:0)" />
+            <blockpin signalname="XLXN_7(7:0)" name="Ball_Pos(9:0)" />
             <blockpin signalname="XLXN_8(7:0)" name="Time_Left(7:0)" />
             <blockpin signalname="XLXN_9(1:0)" name="Result(1:0)" />
         </block>
         <block symbolname="Displayer" name="XLXI_3">
-            <blockpin signalname="XLXN_3(3:0)" name="G1_Pos(3:0)" />
-            <blockpin signalname="XLXN_4(3:0)" name="G2_Pos(3:0)" />
+            <blockpin signalname="XLXN_3(3:0)" name="G1_Pos(4:0)" />
+            <blockpin signalname="XLXN_4(3:0)" name="G2_Pos(4:0)" />
             <blockpin signalname="XLXN_5(2:0)" name="G1_Score(2:0)" />
             <blockpin signalname="XLXN_6(2:0)" name="G2_Score(2:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="Ball_Pos(7:0)" />

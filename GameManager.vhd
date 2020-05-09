@@ -34,13 +34,13 @@ entity GameManager is
            Data_Ready : in  STD_LOGIC;
            Clk_XT : in  STD_LOGIC;
            RST : in  STD_LOGIC;		
-           G1_Pos : out  STD_LOGIC_VECTOR (3 downto 0) := "0000";
-           G2_Pos : out  STD_LOGIC_VECTOR (3 downto 0) := "0000";
+           G1_Pos : out  STD_LOGIC_VECTOR (4 downto 0) := "00000";
+           G2_Pos : out  STD_LOGIC_VECTOR (4 downto 0) := "00000";
            G1_Score : out  STD_LOGIC_VECTOR (2 downto 0) := "000";
            G2_Score : out  STD_LOGIC_VECTOR (2 downto 0) := "000";
            Ball_Pos : out  STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
-           Time_Left : out  STD_LOGIC_VECTOR (7 downto 0) := "11111111";		-- DONE
-           Result : out  STD_LOGIC_VECTOR (1 downto 0) := "00");					-- DONE
+           Time_Left : out  STD_LOGIC_VECTOR (7 downto 0) := "11111111";		
+           Result : out  STD_LOGIC_VECTOR (1 downto 0) := "00");					
 end GameManager;
 
 architecture Behavioral of GameManager is
@@ -64,9 +64,9 @@ constant PLAYER_OFFSET : integer := 3;
 constant PLAYER_WIDTH : integer := 4;
 
 shared variable player_1_x : integer := BARRIER_LEFTRIGHT + PLAYER_OFFSET;
-shared variable player_1_y : integer := 24;
+shared variable player_1_y : integer := FIELD_WIDTH /2;
 shared variable player_2_x : integer := FIELD_WIDTH - BARRIER_LEFTRIGHT - PLAYER_OFFSET;
-shared variable player_2_y : integer := 24;
+shared variable player_2_y : integer := FIELD_WIDTH /2;
 
 shared variable Score_1 : integer := 0;
 shared variable Score_2 : integer := 0;
@@ -113,7 +113,7 @@ begin
 			Score_1 := 0;
 			Score_2 := 0;
 			Result <= "00";
-			-- Ball pos, G1 pos, G2 pos to be reseted in different procces!
+			-- Ball pos, G1 pos, G2 are reseted in different procces
 		end if;
 		
 		Time_Left <= std_logic_vector( to_unsigned( GameTimeLeft, 8 ) );
@@ -224,7 +224,38 @@ begin
 -- RUCH GRACZY
 	PlayerMovement : process (RST, Data_Ready)
 	begin
+		-- move player on specific keyboard push
+		if Data_Ready = '1' then
+			case Data_Input is
+				when "01101011" => -- k pushed
+					if player_2_x > BARRIER_UPDOWN then
+						player_2_x := player_2_x - 1;
+					end if;
+				when "01101100" => -- l pushed
+					if player_2_x < FIELD_HEIGHT - BARRIER_UPDOWN - 1 then
+						player_2_x := player_2_x + 1;
+					end if;
+				when "01110111" => -- w pushed
+					if player_1_x < FIELD_HEIGHT then
+						player_1_x := player_1_x - 1;
+					end if;
+				when "01110011" => -- s pushed
+					if player_1_x < FIELD_HEIGHT - BARRIER_UPDOWN - 1 then
+						player_1_x := player_1_x + 1;
+					end if;
+				when others => null; -- do nothing
+			end case;
+		end if;
 		
+		-- reset player positions
+		if RST = '1' then
+			player_1_x := BARRIER_LEFTRIGHT + PLAYER_OFFSET;
+			player_2_x := FIELD_WIDTH - BARRIER_LEFTRIGHT - PLAYER_OFFSET;
+		end if;
+		
+		-- update player positions output signal
+		G1_Pos(4 downto 0) <= std_logic_vector(to_unsigned(player_1_x, 5));
+		G2_Pos(4 downto 0) <= std_logic_vector(to_unsigned(player_1_x, 5));
 	end process PlayerMovement;
 
 -- ZDARZENIA CZASOWE
@@ -247,8 +278,6 @@ begin
 					ChangeBallPostion <= not ChangeBallPostion;
 			end if;
 		end if;
-		
-		-- somewhere here handle counter & signal for ball movement
 	end process UpdateTime;
 	
 end Behavioral;

@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file Displayer.vhd -- 20:07:31 03/18/2020
+-- VHDL Instantiation Created from source file Displayer.vhd -- 15:16:42 05/09/2020
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
@@ -8,8 +8,8 @@
 
 	COMPONENT Displayer
 	PORT(
-		G1_Pos : IN std_logic_vector(3 downto 0);
-		G2_Pos : IN std_logic_vector(3 downto 0);
+		G1_Pos : IN std_logic_vector(4 downto 0);
+		G2_Pos : IN std_logic_vector(4 downto 0);
 		G1_Score : IN std_logic_vector(2 downto 0);
 		G2_Score : IN std_logic_vector(2 downto 0);
 		Ball_Pos : IN std_logic_vector(7 downto 0);
