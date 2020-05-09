@@ -60,6 +60,14 @@ constant START_BALL_X : integer := 10;
 constant START_BALL_Y : integer := 24;
 constant START_BALL_DIRECTION : std_logic_vector (2 downto 0) := "010";
 
+constant PLAYER_OFFSET : integer := 3;
+constant PLAYER_WIDTH : integer := 4;
+
+shared variable player_1_x : integer := BARRIER_LEFTRIGHT + PLAYER_OFFSET;
+shared variable player_1_y : integer := 24;
+shared variable player_2_x : integer := FIELD_WIDTH - BARRIER_LEFTRIGHT - PLAYER_OFFSET;
+shared variable player_2_y : integer := 24;
+
 shared variable Score_1 : integer := 0;
 shared variable Score_2 : integer := 0;
 shared variable IsFinished : bit := '0';
@@ -81,22 +89,22 @@ begin
 		-- update Time_Left
 		if IsFinished = '0' then
 			GameTimeLeft := GameTimeLeft - 1;
-		end if;
-		
-		-- if there's no time left
-		-- or score reached MAX_POINTS 
-		-- calculate result
-		if (GameTimeLeft = 0) OR (Score_1 = MAX_POINTS OR Score_2 = MAX_POINTS) then
-			IsFinished := '1';
-			if Score_1 > Score_2 then
-						Result <= "01";
-					elsif Score_1 < Score_2 then
-						Result <= "10";
+			
+			-- if there's no time left
+			-- or score reached MAX_POINTS 
+			-- calculate result
+			if (GameTimeLeft = 0) OR (Score_1 = MAX_POINTS OR Score_2 = MAX_POINTS) then
+				IsFinished := '1';
+				if Score_1 > Score_2 then
+							Result <= "01";
+						elsif Score_1 < Score_2 then
+							Result <= "10";
+						else
+							Result <= "11";
+						end if;
 					else
-						Result <= "11";
-					end if;
-				else
-					Result <= "00";
+						Result <= "00";
+			end if;
 		end if;
 		
 		if RST = '1' then
@@ -132,16 +140,77 @@ begin
 			ball_y := ball_y + 1;
 		end if;
 		
-		-- Validate new position of the ball
+		-- VALIDATE WALL COLLISION OF THE BALL
+		-- On the X-axis
 		if ball_x <= BARRIER_LEFTRIGHT then
-			ball_x := BARRIER_LEFTRIGHT + 1;
-			BallDirection(2) <= not BallDirection(2);
-		end if;
-		if ball_x >= FIELD_WIDTH - BARRIER_LEFTRIGHT then
-			ball_x := FIELD_WIDTH - BARRIER_LEFTRIGHT - 1;
-			BallDirection(2) <= not BallDirection(2);
-		end if; 
 		
+			-- Check for goal
+			if ball_y > (FIELD_HEIGHT - GOAL_WIDTH) / 2 and ball_y < (FIELD_HEIGHT + GOAL_WIDTH) / 2 then
+			
+				-- Goal on the left
+				Score_2 := Score_2 + 1;
+				G2_Score <= std_logic_vector(to_signed(Score_2, 3));
+				ball_x := START_BALL_X;
+				ball_y := START_BALL_Y;
+				
+			else
+			
+				ball_x := BARRIER_LEFTRIGHT + 1;
+				
+			end if;
+			
+			BallDirection(2) := not BallDirection(2);
+			
+		end if;
+		
+		if ball_x >= FIELD_WIDTH - BARRIER_LEFTRIGHT then
+		
+			-- Check for goal
+			if ball_y > (FIELD_HEIGHT - GOAL_WIDTH) / 2 and ball_y < (FIELD_HEIGHT + GOAL_WIDTH) / 2 then
+				
+				-- Goal on the right
+				Score_1 := Score_1 + 1;
+				G1_Score <= std_logic_vector(to_signed(Score_1, 3));
+				ball_x := START_BALL_X;
+				ball_y := START_BALL_Y;
+				
+			else
+				
+				ball_x := FIELD_WIDTH - BARRIER_LEFTRIGHT - 1;
+				
+			end if;
+			
+			BallDirection(2) := not BallDirection(2);
+		
+		end if;
+		
+		-- On the Y-axis
+		if ball_y <= BARRIER_UPDOWN then
+			ball_y := BARRIER_UPDOWN + 1;
+			BallDirection(0) := not BallDirection(0);
+		end if;
+		if ball_y >= FIELD_HEIGHT - BARRIER_UPDOWN then
+			ball_y := FIELD_HEIGHT - BARRIER_UPDOWN - 1;
+			BallDirection(0) := not BallDirection(0);
+		end if;
+		
+		-- COLLISION WITH PLAYERS ON THE X-AXIS
+		if ball_x = player_1_x then
+			if ball_y >= player_1_y - PLAYER_WIDTH and ball_y <= player_1_y + PLAYER_WIDTH then
+				-- Collision with player 1
+				ball_x := ball_x + 1;
+				BallDirection(2) := not BallDirection(2);
+			end if;
+		end if;
+		if ball_x = player_2_x then
+			if ball_y >= player_2_y - PLAYER_WIDTH and ball_y <= player_2_y + PLAYER_WIDTH then
+				-- Collision with player 2
+				ball_x := ball_x - 1;
+				BallDirection(2) := not BallDirection(2);
+			end if;
+		end if;
+		
+		-- RESET BALL
 		if RST = '1' then
 			ball_x := START_BALL_X;
 			ball_y := START_BALL_Y;

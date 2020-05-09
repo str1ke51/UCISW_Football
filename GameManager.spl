@@ -8,7 +8,7 @@ RST
 =G2_Pos[3:0]=
 =G1_Score[2:0]=
 =G2_Score[2:0]=
-=Ball_Pos[7:0]=
+=Ball_Pos[9:0]=
 =Time_Left[7:0]=
 =Result[1:0]=
 [BiDir]
