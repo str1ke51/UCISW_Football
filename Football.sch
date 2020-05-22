@@ -8,11 +8,11 @@
     <netlist>
         <signal name="XLXN_1(7:0)" />
         <signal name="XLXN_2" />
-        <signal name="XLXN_3(3:0)" />
-        <signal name="XLXN_4(3:0)" />
+        <signal name="XLXN_3(4:0)" />
+        <signal name="XLXN_4(4:0)" />
         <signal name="XLXN_5(2:0)" />
         <signal name="XLXN_6(2:0)" />
-        <signal name="XLXN_7(7:0)" />
+        <signal name="XLXN_7(9:0)" />
         <signal name="XLXN_8(7:0)" />
         <signal name="XLXN_9(1:0)" />
         <signal name="XLXN_10(7:0)" />
@@ -66,7 +66,7 @@
             <line x2="384" y1="-224" y2="-224" x1="320" />
         </blockdef>
         <blockdef name="GameManager">
-            <timestamp>2020-5-9T13:27:4</timestamp>
+            <timestamp>2020-5-20T20:53:1</timestamp>
             <rect width="336" x="64" y="-448" height="448" />
             <line x2="0" y1="-416" y2="-416" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -89,7 +89,7 @@
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
         <blockdef name="Displayer">
-            <timestamp>2020-5-9T13:16:25</timestamp>
+            <timestamp>2020-5-20T20:55:36</timestamp>
             <rect width="304" x="64" y="-640" height="640" />
             <rect width="64" x="0" y="-620" height="24" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
@@ -175,20 +175,20 @@
             <blockpin signalname="Clk" name="Clk_XT" />
             <blockpin signalname="RST" name="RST" />
             <blockpin signalname="XLXN_1(7:0)" name="Data_Input(7:0)" />
-            <blockpin signalname="XLXN_3(3:0)" name="G1_Pos(4:0)" />
-            <blockpin signalname="XLXN_4(3:0)" name="G2_Pos(4:0)" />
+            <blockpin signalname="XLXN_3(4:0)" name="G1_Pos(4:0)" />
+            <blockpin signalname="XLXN_4(4:0)" name="G2_Pos(4:0)" />
             <blockpin signalname="XLXN_5(2:0)" name="G1_Score(2:0)" />
             <blockpin signalname="XLXN_6(2:0)" name="G2_Score(2:0)" />
-            <blockpin signalname="XLXN_7(7:0)" name="Ball_Pos(9:0)" />
+            <blockpin signalname="XLXN_7(9:0)" name="Ball_Pos(9:0)" />
             <blockpin signalname="XLXN_8(7:0)" name="Time_Left(7:0)" />
             <blockpin signalname="XLXN_9(1:0)" name="Result(1:0)" />
         </block>
         <block symbolname="Displayer" name="XLXI_3">
-            <blockpin signalname="XLXN_3(3:0)" name="G1_Pos(4:0)" />
-            <blockpin signalname="XLXN_4(3:0)" name="G2_Pos(4:0)" />
+            <blockpin signalname="XLXN_3(4:0)" name="G1_Pos(4:0)" />
+            <blockpin signalname="XLXN_4(4:0)" name="G2_Pos(4:0)" />
             <blockpin signalname="XLXN_5(2:0)" name="G1_Score(2:0)" />
             <blockpin signalname="XLXN_6(2:0)" name="G2_Score(2:0)" />
-            <blockpin signalname="XLXN_7(7:0)" name="Ball_Pos(7:0)" />
+            <blockpin signalname="XLXN_7(9:0)" name="Ball_Pos(9:0)" />
             <blockpin signalname="XLXN_8(7:0)" name="Time_Left(7:0)" />
             <blockpin signalname="XLXN_9(1:0)" name="Result(1:0)" />
             <blockpin signalname="XLXN_11" name="Char_WE" />
@@ -261,10 +261,10 @@
             <wire x2="736" y1="976" y2="1040" x1="736" />
             <wire x2="848" y1="976" y2="976" x1="736" />
         </branch>
-        <branch name="XLXN_3(3:0)">
+        <branch name="XLXN_3(4:0)">
             <wire x2="1664" y1="976" y2="976" x1="1312" />
         </branch>
-        <branch name="XLXN_4(3:0)">
+        <branch name="XLXN_4(4:0)">
             <wire x2="1488" y1="1040" y2="1040" x1="1312" />
             <wire x2="1488" y1="1040" y2="1072" x1="1488" />
             <wire x2="1664" y1="1072" y2="1072" x1="1488" />
@@ -279,7 +279,7 @@
             <wire x2="1472" y1="1168" y2="1264" x1="1472" />
             <wire x2="1664" y1="1264" y2="1264" x1="1472" />
         </branch>
-        <branch name="XLXN_7(7:0)">
+        <branch name="XLXN_7(9:0)">
             <wire x2="1456" y1="1232" y2="1232" x1="1312" />
             <wire x2="1456" y1="1232" y2="1360" x1="1456" />
             <wire x2="1664" y1="1360" y2="1360" x1="1456" />

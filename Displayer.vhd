@@ -34,17 +34,17 @@ entity Displayer is
            G2_Pos : in  STD_LOGIC_VECTOR (4 downto 0);
            G1_Score : in  STD_LOGIC_VECTOR (2 downto 0);
            G2_Score : in  STD_LOGIC_VECTOR (2 downto 0);
-           Ball_Pos : in  STD_LOGIC_VECTOR (7 downto 0);
+           Ball_Pos : in  STD_LOGIC_VECTOR (9 downto 0);
            Time_Left : in  STD_LOGIC_VECTOR (7 downto 0);
            Result : in  STD_LOGIC_VECTOR (1 downto 0);
-           Char_DI : out  STD_LOGIC_VECTOR (7 downto 0);
-           Char_WE : out  STD_LOGIC;
-           Home : out  STD_LOGIC;
-           NewLine : out  STD_LOGIC;
-           Goto00 : out  STD_LOGIC;
-           CursorOn : out  STD_LOGIC;
-           ScrollEn : out  STD_LOGIC;
-           ScrollClear : out  STD_LOGIC;
+           Char_DI : out  STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+           Char_WE : out  STD_LOGIC := '0';
+           Home : out  STD_LOGIC := '0';
+           NewLine : out  STD_LOGIC := '0';
+           Goto00 : out  STD_LOGIC := '0';
+           CursorOn : out  STD_LOGIC := '0';
+           ScrollEn : out  STD_LOGIC := '0';
+           ScrollClear : out  STD_LOGIC := '0';
            Line : out  STD_LOGIC_VECTOR (63 downto 0);
            Blank : out  STD_LOGIC_VECTOR (15 downto 0));
 end Displayer;
@@ -53,8 +53,8 @@ architecture Behavioral of Displayer is
 
 -- Zmienne do ekranu LCD
 	shared variable Seconds_Left : integer := to_integer(signed(Time_Left));
-	shared variable Seconds : integer := Seconds_Left mod 60;
-	shared variable Minutes : integer := Seconds_Left / 60;
+	shared variable Seconds : integer;
+	shared variable Minutes : integer;
 	
 begin
 -- Aktualizacja ekranu LCD
@@ -83,23 +83,12 @@ begin
 		
 		Blank <= "0010101001110100";
 	end process UpdateLCD;
--- Aktualizacja ekranu LCD
 	
 -- Aktualizacja monitora
 	UpdateScreen : process (G1_Pos, G2_Pos, Ball_Pos, Result)
 	begin
 	
 	end process UpdateScreen;
--- Aktualizacja monitora
 
-	Char_DI <= "00000000";
-	Char_WE <= '0';
-	Home <= '0';
-	NewLine <= '0';
-	Goto00 <= '0';
-	CursorOn <= '0';
-	ScrollEn <= '0';
-	ScrollClear <= '0';
-	
 end Behavioral;
 

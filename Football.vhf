@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Football.vhf
--- /___/   /\     Timestamp : 03/18/2020 19:47:36
+-- /___/   /\     Timestamp : 05/20/2020 23:24:29
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Kacper/Desktop/Football/Football.vhf -w C:/Users/Kacper/Desktop/Football/Football.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/KM/Desktop/UCISW_Football/Football.vhf -w C:/Users/KM/Desktop/UCISW_Football/Football.sch
 --Design Name: Football
 --Device: spartan3e
 --Purpose:
@@ -46,11 +46,11 @@ architecture BEHAVIORAL of Football is
    attribute BOX_TYPE   : string ;
    signal XLXN_1      : std_logic_vector (7 downto 0);
    signal XLXN_2      : std_logic;
-   signal XLXN_3      : std_logic_vector (3 downto 0);
-   signal XLXN_4      : std_logic_vector (3 downto 0);
+   signal XLXN_3      : std_logic_vector (4 downto 0);
+   signal XLXN_4      : std_logic_vector (4 downto 0);
    signal XLXN_5      : std_logic_vector (2 downto 0);
    signal XLXN_6      : std_logic_vector (2 downto 0);
-   signal XLXN_7      : std_logic_vector (7 downto 0);
+   signal XLXN_7      : std_logic_vector (9 downto 0);
    signal XLXN_8      : std_logic_vector (7 downto 0);
    signal XLXN_9      : std_logic_vector (1 downto 0);
    signal XLXN_10     : std_logic_vector (7 downto 0);
@@ -79,21 +79,21 @@ architecture BEHAVIORAL of Football is
              Clk_XT     : in    std_logic; 
              RST        : in    std_logic; 
              Data_Input : in    std_logic_vector (7 downto 0); 
-             G1_Pos     : out   std_logic_vector (3 downto 0); 
-             G2_Pos     : out   std_logic_vector (3 downto 0); 
+             G1_Pos     : out   std_logic_vector (4 downto 0); 
+             G2_Pos     : out   std_logic_vector (4 downto 0); 
              G1_Score   : out   std_logic_vector (2 downto 0); 
              G2_Score   : out   std_logic_vector (2 downto 0); 
-             Ball_Pos   : out   std_logic_vector (7 downto 0); 
+             Ball_Pos   : out   std_logic_vector (9 downto 0); 
              Time_Left  : out   std_logic_vector (7 downto 0); 
              Result     : out   std_logic_vector (1 downto 0));
    end component;
    
    component Displayer
-      port ( G1_Pos      : in    std_logic_vector (3 downto 0); 
-             G2_Pos      : in    std_logic_vector (3 downto 0); 
+      port ( G1_Pos      : in    std_logic_vector (4 downto 0); 
+             G2_Pos      : in    std_logic_vector (4 downto 0); 
              G1_Score    : in    std_logic_vector (2 downto 0); 
              G2_Score    : in    std_logic_vector (2 downto 0); 
-             Ball_Pos    : in    std_logic_vector (7 downto 0); 
+             Ball_Pos    : in    std_logic_vector (9 downto 0); 
              Time_Left   : in    std_logic_vector (7 downto 0); 
              Result      : in    std_logic_vector (1 downto 0); 
              Char_WE     : out   std_logic; 
@@ -158,19 +158,19 @@ begin
                 Data_Input(7 downto 0)=>XLXN_1(7 downto 0),
                 Data_Ready=>XLXN_2,
                 RST=>RST,
-                Ball_Pos(7 downto 0)=>XLXN_7(7 downto 0),
-                G1_Pos(3 downto 0)=>XLXN_3(3 downto 0),
+                Ball_Pos(9 downto 0)=>XLXN_7(9 downto 0),
+                G1_Pos(4 downto 0)=>XLXN_3(4 downto 0),
                 G1_Score(2 downto 0)=>XLXN_5(2 downto 0),
-                G2_Pos(3 downto 0)=>XLXN_4(3 downto 0),
+                G2_Pos(4 downto 0)=>XLXN_4(4 downto 0),
                 G2_Score(2 downto 0)=>XLXN_6(2 downto 0),
                 Result(1 downto 0)=>XLXN_9(1 downto 0),
                 Time_Left(7 downto 0)=>XLXN_8(7 downto 0));
    
    XLXI_3 : Displayer
-      port map (Ball_Pos(7 downto 0)=>XLXN_7(7 downto 0),
-                G1_Pos(3 downto 0)=>XLXN_3(3 downto 0),
+      port map (Ball_Pos(9 downto 0)=>XLXN_7(9 downto 0),
+                G1_Pos(4 downto 0)=>XLXN_3(4 downto 0),
                 G1_Score(2 downto 0)=>XLXN_5(2 downto 0),
-                G2_Pos(3 downto 0)=>XLXN_4(3 downto 0),
+                G2_Pos(4 downto 0)=>XLXN_4(4 downto 0),
                 G2_Score(2 downto 0)=>XLXN_6(2 downto 0),
                 Result(1 downto 0)=>XLXN_9(1 downto 0),
                 Time_Left(7 downto 0)=>XLXN_8(7 downto 0),

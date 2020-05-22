@@ -1,2 +1,0 @@
-vhdl isim_temp "GameManager.vhd"
-vhdl isim_temp "GameManagerTestBench.vhd"

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="Displayer">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-5-9T13:16:25</timestamp>
+    <timestamp>2020-5-20T20:55:36</timestamp>
     <pin polarity="Input" x="0" y="-608" name="G1_Pos(4:0)" />
     <pin polarity="Input" x="0" y="-512" name="G2_Pos(4:0)" />
     <pin polarity="Input" x="0" y="-416" name="G1_Score(2:0)" />
     <pin polarity="Input" x="0" y="-320" name="G2_Score(2:0)" />
-    <pin polarity="Input" x="0" y="-224" name="Ball_Pos(7:0)" />
+    <pin polarity="Input" x="0" y="-224" name="Ball_Pos(9:0)" />
     <pin polarity="Input" x="0" y="-128" name="Time_Left(7:0)" />
     <pin polarity="Input" x="0" y="-32" name="Result(1:0)" />
     <pin polarity="Output" x="432" y="-608" name="Char_WE" />
@@ -25,7 +25,7 @@
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-512" type="pin G2_Pos(4:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin G1_Score(2:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-320" type="pin G2_Score(2:0)" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin Ball_Pos(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin Ball_Pos(9:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-128" type="pin Time_Left(7:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin Result(1:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-608" type="pin Char_WE" />

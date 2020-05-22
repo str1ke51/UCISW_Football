@@ -1,6 +1,6 @@
-AR displayer behavioral C:/XilinxPrj/Football/Displayer.vhd sub00/vhpl03 1583768277
-AR gamemanager behavioral C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd sub00/vhpl01 1586601384
-EN football NULL C:/XilinxPrj/Football/Football.vhf sub00/vhpl04 1583768278
-EN displayer NULL C:/XilinxPrj/Football/Displayer.vhd sub00/vhpl02 1583768276
-EN gamemanager NULL C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd sub00/vhpl00 1586601383
-AR football behavioral C:/XilinxPrj/Football/Football.vhf sub00/vhpl05 1583768279
+AR displayer behavioral C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd sub00/vhpl03 1590009978
+AR gamemanager behavioral C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd sub00/vhpl01 1590009976
+EN football NULL C:/Users/KM/Desktop/UCISW_Football/Football.vhf sub00/vhpl04 1590009979
+EN displayer NULL C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd sub00/vhpl02 1590009977
+EN gamemanager NULL C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd sub00/vhpl00 1590009975
+AR football behavioral C:/Users/KM/Desktop/UCISW_Football/Football.vhf sub00/vhpl05 1590009980
