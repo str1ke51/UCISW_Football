@@ -51,10 +51,42 @@ end Displayer;
 
 architecture Behavioral of Displayer is
 
+	function DIVIDE (X, Y : integer)
+		return integer is
+		variable counter : integer := 0;
+		variable R : integer := X;
+	begin
+		while R > Y loop
+			R := R - Y;
+			counter := counter + 1;
+		end loop;
+		return counter;
+	end DIVIDE;
+	
+	function MODULO (X, Y : integer)
+		return integer is
+		variable R : integer := X;
+	begin
+		while R > Y loop
+			R := R - Y;
+		end loop;
+		return R;
+	end MODULO;
+	
+	function DIVIDE_BY_TEN (X : integer)
+		return integer is
+		variable counter : integer := 0;
+		variable R : integer := X;
+	begin
+		while R > 10 loop
+			R := R - 10;
+			counter := counter + 1;
+		end loop;
+		return counter;
+	end DIVIDE_BY_TEN;
+
 -- Zmienne do ekranu LCD
 	shared variable Seconds_Left : integer := to_integer(signed(Time_Left));
-	shared variable Seconds : integer;
-	shared variable Minutes : integer;
 	
 begin
 -- Aktualizacja ekranu LCD
@@ -63,6 +95,11 @@ begin
 		variable Seconds_One_Display : std_logic_vector(3 downto 0) := "0000";
 		variable Minutes_Display : std_logic_vector(3 downto 0) := "0000";
 		
+		variable Seconds_Ten : integer := 0;
+		variable Seconds_One : integer := 0;
+		variable Seconds : integer := 0;
+		variable Minutes : integer := 0;
+		
 	begin
 		Line <= "0000000100000000000000000000000000100000000000000000000000000000";
 		
@@ -70,11 +107,14 @@ begin
 		Line(42 downto 40) <= G2_Score;
 		
 		Seconds_Left := to_integer(signed(Time_Left));
-		Seconds := Seconds_Left mod 60;
-		Minutes := Seconds_Left / 60;
+		Seconds := MODULO(Seconds_Left, 60);
+		Minutes := DIVIDE(Seconds_Left, 60);
 		
-		Seconds_Ten_Display := std_logic_vector(to_unsigned(Seconds / 10, 4));
-		Seconds_One_Display := std_logic_vector(to_unsigned(Seconds mod 10, 4));
+		--Seconds_One := MODULO(Seconds, 10);
+		Seconds_Ten := DIVIDE_BY_TEN(Seconds);
+		
+		Seconds_Ten_Display := std_logic_vector(to_unsigned(Seconds_Ten, 4));
+		Seconds_One_Display := std_logic_vector(to_unsigned(Seconds_One, 4));
 		Minutes_Display := std_logic_vector(to_unsigned(Minutes, 4));
 		
 		Line(15 downto 12) <= Minutes_Display;

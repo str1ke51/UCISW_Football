@@ -72,3 +72,67 @@ spl2sym -intstyle ise -family spartan3e Displayer.spl C:/Users/KM/Desktop/UCISW_
 vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template D:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e Displayer.spl C:/Users/KM/Desktop/UCISW_Football/Displayer.sym 
 vhdtdtfi -prj Football -o C:/Users/KM/Desktop/UCISW_Football/Displayer.vhi -module Displayer -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Displayer.vhd 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl C:/Users/Kacper/Desktop/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 

@@ -110,8 +110,6 @@ begin
 		if RST = '1' then
 			GameTimeLeft := MAX_GAME_TIME;
 			IsFinished := '0';
-			Score_1 := 0;
-			Score_2 := 0;
 			Result <= "00";
 			-- Ball pos, G1 pos, G2 are reseted in different procces
 		end if;
@@ -119,7 +117,7 @@ begin
 		Time_Left <= std_logic_vector( to_unsigned( GameTimeLeft, 8 ) );
 	end process ExecuteEverySecond;
 	
--- RUCH PI£KI
+-- RUCH PI£KI I DETEKCJA GOLI
 	BallMovement : process (ChangeBallPostion, RST)
 	begin
 		-- Calculate X-axis movement
@@ -215,6 +213,9 @@ begin
 			ball_x := START_BALL_X;
 			ball_y := START_BALL_Y;
 			BallDirection := START_BALL_DIRECTION;
+			
+			Score_1 := 0;
+			Score_2 := 0;
 		end if;
 		
 		Ball_Pos(7 downto 4) <= std_logic_vector(to_unsigned(ball_x, 4));

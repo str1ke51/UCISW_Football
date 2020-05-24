@@ -5,22 +5,29 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/KM/Desktop/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">148</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Rx</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">D:/Stuff/Programowanie/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">148</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Rx</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/KM/Desktop/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">GameManager</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">D:/Stuff/Programowanie/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">188</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">LCD1x64</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/KM/Desktop/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">188</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">LCD1x64</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">D:/Stuff/Programowanie/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Busy</arg>&apos; of component &apos;<arg fmt="%s" index="4">VGAtxt48x20</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/KM/Desktop/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Busy</arg>&apos; of component &apos;<arg fmt="%s" index="4">VGAtxt48x20</arg>&apos;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">D:/Stuff/Programowanie/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">VGAtxt48x20</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/KM/Desktop/UCISW_Football/Football.vhf</arg>&quot; line <arg fmt="%d" index="2">199</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">VGAtxt48x20</arg>&gt;.
+<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd</arg>&quot; line <arg fmt="%d" index="2">128</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="error" file="Xst" num="769" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd</arg>&quot; line <arg fmt="%d" index="2">74</arg>: Operator &lt;<arg fmt="%s" index="3">DIVIDE</arg>&gt; must have constant operands or first operand must be power of 2
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;Data_Input&gt;</arg>
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">BallDirection&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">GameManager</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="error" file="Xst" num="1312" delta="new" >Loop has iterated <arg fmt="%d" index="1">64</arg> times. Use &quot;set -loop_iteration_limit XX&quot; to iterate more.
 </msg>
 
 </messages>

@@ -126,3 +126,21 @@ spl2sym -intstyle ise -family spartan3e GameManager.spl C:/Users/Kacper/Desktop/
 vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template D:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e GameManager.spl C:/Users/KM/Desktop/UCISW_Football/GameManager.sym 
 vhdtdtfi -prj Football -o C:/Users/KM/Desktop/UCISW_Football/GameManager.vhi -module GameManager -template D:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work GameManager.vhd 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl C:/Users/Kacper/Desktop/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl C:/Users/Kacper/Desktop/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl C:/Users/Kacper/Desktop/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl C:/Users/Kacper/Desktop/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl C:/Users/Kacper/Desktop/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl D:/Stuff/Programowanie/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl D:/Stuff/Programowanie/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl D:/Stuff/Programowanie/UCISW_Football/GameManager.sym 
+vhdtdtfi -lib work GameManager.vhd -prj Football -o GameManager.spl -module GameManager -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e GameManager.spl D:/Stuff/Programowanie/UCISW_Football/GameManager.sym 

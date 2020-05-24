@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: Football.prj
 
@@ -104,18 +104,21 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd" in Library work.
-Entity <gamemanager> compiled.
-Entity <gamemanager> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd" in Library work.
-Architecture behavioral of Entity displayer is up to date.
-Compiling vhdl file "C:/Users/KM/Desktop/UCISW_Football/Football.vhf" in Library work.
-Architecture behavioral of Entity football is up to date.
+Compiling vhdl file "D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd" in Library work.
+Architecture behavioral of Entity gamemanager is up to date.
+Compiling vhdl file "D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd" in Library work.
+Entity <displayer> compiled.
+Entity <displayer> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/Stuff/Programowanie/UCISW_Football/Football.vhf" in Library work.
+Entity <football> compiled.
+Entity <football> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <Football> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <GameManager> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <Displayer> in library <work> (architecture <behavioral>).
 
@@ -124,20 +127,26 @@ Analyzing hierarchy for entity <Displayer> in library <work> (architecture <beha
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Football> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/KM/Desktop/UCISW_Football/Football.vhf" line 148: Instantiating black box module <PS2_Rx>.
-WARNING:Xst:2211 - "C:/Users/KM/Desktop/UCISW_Football/Football.vhf" line 156: Instantiating black box module <GameManager>.
-WARNING:Xst:2211 - "C:/Users/KM/Desktop/UCISW_Football/Football.vhf" line 188: Instantiating black box module <LCD1x64>.
-WARNING:Xst:753 - "C:/Users/KM/Desktop/UCISW_Football/Football.vhf" line 199: Unconnected output port 'Busy' of component 'VGAtxt48x20'.
-WARNING:Xst:2211 - "C:/Users/KM/Desktop/UCISW_Football/Football.vhf" line 199: Instantiating black box module <VGAtxt48x20>.
+WARNING:Xst:2211 - "D:/Stuff/Programowanie/UCISW_Football/Football.vhf" line 148: Instantiating black box module <PS2_Rx>.
+WARNING:Xst:2211 - "D:/Stuff/Programowanie/UCISW_Football/Football.vhf" line 188: Instantiating black box module <LCD1x64>.
+WARNING:Xst:753 - "D:/Stuff/Programowanie/UCISW_Football/Football.vhf" line 199: Unconnected output port 'Busy' of component 'VGAtxt48x20'.
+WARNING:Xst:2211 - "D:/Stuff/Programowanie/UCISW_Football/Football.vhf" line 199: Instantiating black box module <VGAtxt48x20>.
 Entity <Football> analyzed. Unit <Football> generated.
 
+Analyzing Entity <GameManager> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd" line 128: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd" line 226: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Data_Input>
+INFO:Xst:2679 - Register <BallDirection<1>> in unit <GameManager> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <GameManager> analyzed. Unit <GameManager> generated.
+
 Analyzing Entity <Displayer> in library <work> (Architecture <behavioral>).
-ERROR:Xst:769 - "C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd" line 74: Operator <DIVIDE> must have constant operands or first operand must be power of 2
+ERROR:Xst:1312 - Loop has iterated 64 times. Use "set -loop_iteration_limit XX" to iterate more.
 --> 
 
-Total memory usage is 4537396 kilobytes
+Total memory usage is 4524388 kilobytes
 
 Number of errors   :    1 (   0 filtered)
 Number of warnings :    5 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

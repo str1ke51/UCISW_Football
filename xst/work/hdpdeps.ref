@@ -1,19 +1,21 @@
 V3 16
-FL C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd 2020/05/20.23:10:23 P.20131013
-EN work/Displayer 1590009977 FL C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd \
+FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd 2020/05/24.21:34:28 P.20131013
+EN work/Displayer 1590348890 \
+      FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Displayer/Behavioral 1590009978 \
-      FL C:/Users/KM/Desktop/UCISW_Football/Displayer.vhd EN work/Displayer 1590009977
-FL C:/Users/KM/Desktop/UCISW_Football/Football.vhf 2020/05/20.23:24:29 P.20131013
-EN work/Football 1590009979 FL C:/Users/KM/Desktop/UCISW_Football/Football.vhf \
+AR work/Displayer/Behavioral 1590348891 \
+      FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd EN work/Displayer 1590348890
+FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf 2020/05/24.21:34:45 P.20131013
+EN work/Football 1590348892 FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/Football/BEHAVIORAL 1590009980 \
-      FL C:/Users/KM/Desktop/UCISW_Football/Football.vhf EN work/Football 1590009979 \
+AR work/Football/BEHAVIORAL 1590348893 \
+      FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf EN work/Football 1590348892 \
       CP PS2_Rx CP GameManager CP Displayer CP LCD1x64 CP VGAtxt48x20 CP BUF
-FL C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd 2020/05/20.23:26:12 P.20131013
-EN work/GameManager 1590009975 \
-      FL C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd \
+FL D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd 2020/05/24.20:10:05 P.20131013
+EN work/GameManager 1590348888 \
+      FL D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/GameManager/Behavioral 1590009976 \
-      FL C:/Users/KM/Desktop/UCISW_Football/GameManager.vhd EN work/GameManager 1590009975
+AR work/GameManager/Behavioral 1590348889 \
+      FL D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd \
+      EN work/GameManager 1590348888

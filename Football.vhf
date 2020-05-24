@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Football.vhf
--- /___/   /\     Timestamp : 05/20/2020 23:24:29
+-- /___/   /\     Timestamp : 05/24/2020 21:34:45
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/KM/Desktop/UCISW_Football/Football.vhf -w C:/Users/KM/Desktop/UCISW_Football/Football.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl D:/Stuff/Programowanie/UCISW_Football/Football.vhf -w D:/Stuff/Programowanie/UCISW_Football/Football.sch
 --Design Name: Football
 --Device: spartan3e
 --Purpose:
