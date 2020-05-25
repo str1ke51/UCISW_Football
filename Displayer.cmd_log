@@ -136,3 +136,7 @@ vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displaye
 spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
 vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 
+vhdtdtfi -lib work Displayer.vhd -prj Football -o Displayer.spl -module Displayer -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Displayer.spl D:/Stuff/Programowanie/UCISW_Football/Displayer.sym 

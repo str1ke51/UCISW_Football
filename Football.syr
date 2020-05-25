@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: Football.prj
 
@@ -141,12 +141,1512 @@ INFO:Xst:2679 - Register <BallDirection<1>> in unit <GameManager> has a constant
 Entity <GameManager> analyzed. Unit <GameManager> generated.
 
 Analyzing Entity <Displayer> in library <work> (Architecture <behavioral>).
-ERROR:Xst:1312 - Loop has iterated 64 times. Use "set -loop_iteration_limit XX" to iterate more.
+Entity <Displayer> analyzed. Unit <Displayer> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <GameManager>.
+    Related source file is "D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd".
+WARNING:Xst:1305 - Output <Ball_Pos<9:8>> is never assigned. Tied to value 00.
+WARNING:Xst:653 - Signal <player_2_y> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011000.
+WARNING:Xst:653 - Signal <player_1_y> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000011000.
+WARNING:Xst:1780 - Signal <IsGameEnded> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 32-bit latch for signal <player_1_x>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 3-bit latch for signal <G2_Score>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 3-bit latch for signal <G1_Score>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <player_2_x>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <BallDirection_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <Score_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <Score_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <Result>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <GameTimeLeft>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IsFinished>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <BallDirection_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 32-bit adder for signal <ball_x$add0000> created at line 197.
+    Found 32-bit adder for signal <ball_x$add0001> created at line 204.
+    Found 32-bit adder for signal <ball_x$addsub0000> created at line 199.
+    Found 32-bit subtractor for signal <ball_x$addsub0001> created at line 206.
+    Found 32-bit comparator equal for signal <ball_x$cmp_eq0000> created at line 196.
+    Found 32-bit comparator equal for signal <ball_x$cmp_eq0001> created at line 203.
+    Found 32-bit comparator greatequal for signal <ball_x$cmp_ge0000> created at line 204.
+    Found 32-bit comparator lessequal for signal <ball_x$cmp_le0000> created at line 204.
+    Found 32-bit addsub for signal <ball_x$mux0000> created at line 124.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_x$mux0002> created at line 143.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_x$mux0004> created at line 164.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_x$mux0006> created at line 196.
+    Found 32-bit subtractor for signal <ball_x$sub0000> created at line 197.
+    Found 32-bit subtractor for signal <ball_x$sub0001> created at line 204.
+    Found 32-bit addsub for signal <ball_y$mux0000> created at line 133.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_y$mux0002> created at line 143.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_y$mux0004> created at line 164.
+    Found 32-bit comparator greatequal for signal <BallDirection_0$cmp_ge0000> created at line 190.
+    Found 32-bit comparator lessequal for signal <BallDirection_0$cmp_le0000> created at line 186.
+    Found 32-bit comparator greatequal for signal <BallDirection_2$cmp_ge0000> created at line 197.
+    Found 32-bit comparator greater for signal <BallDirection_2$cmp_gt0000> created at line 204.
+    Found 32-bit comparator greater for signal <BallDirection_2$cmp_gt0001> created at line 197.
+    Found 32-bit comparator greater for signal <BallDirection_2$cmp_gt0002> created at line 143.
+    Found 32-bit comparator lessequal for signal <BallDirection_2$cmp_le0000> created at line 197.
+    Found 32-bit comparator less for signal <BallDirection_2$cmp_lt0000> created at line 204.
+    Found 32-bit comparator less for signal <BallDirection_2$cmp_lt0001> created at line 197.
+    Found 32-bit comparator less for signal <BallDirection_2$cmp_lt0002> created at line 164.
+    Found 32-bit comparator not equal for signal <BallDirection_2$cmp_ne0000> created at line 196.
+    Found 32-bit comparator not equal for signal <BallDirection_2$cmp_ne0001> created at line 203.
+    Found 1-bit register for signal <ChangeBallPostion>.
+    Found 32-bit adder for signal <ChangeBallPostion$addsub0000> created at line 270.
+    Found 32-bit comparator greater for signal <ChangeBallPostion$cmp_gt0000> created at line 277.
+    Found 32-bit up counter for signal <cyclesCount>.
+    Found 32-bit up counter for signal <cyclesForBallCount>.
+    Found 3-bit adder for signal <G1_Score$add0000> created at line 171.
+    Found 32-bit comparator greatequal for signal <G1_Score$cmp_ge0000> created at line 164.
+    Found 32-bit comparator greater for signal <G1_Score$cmp_gt0000> created at line 167.
+    Found 32-bit comparator less for signal <G1_Score$cmp_lt0000> created at line 167.
+    Found 3-bit adder for signal <G2_Score$add0000> created at line 150.
+    Found 32-bit comparator greater for signal <G2_Score$cmp_gt0000> created at line 146.
+    Found 32-bit comparator lessequal for signal <G2_Score$cmp_le0000> created at line 143.
+    Found 32-bit comparator less for signal <G2_Score$cmp_lt0000> created at line 146.
+    Found 32-bit 4-to-1 multiplexer for signal <GameTimeLeft$mux0001> created at line 110.
+    Found 32-bit subtractor for signal <GameTimeLeft$sub0001> created at line 91.
+    Found 32-bit adder for signal <player_1_x$add0000> created at line 245.
+    Found 32-bit comparator less for signal <player_1_x$cmp_lt0000> created at line 240.
+    Found 32-bit comparator less for signal <player_1_x$cmp_lt0001> created at line 244.
+    Found 32-bit subtractor for signal <player_1_x$sub0000> created at line 241.
+    Found 32-bit comparator greater for signal <player_2_x$cmp_gt0000> created at line 232.
+    Found 32-bit comparator less for signal <player_2_x$cmp_lt0000> created at line 236.
+    Found 32-bit addsub for signal <player_2_x$share0000> created at line 230.
+    Found 32-bit comparator greater for signal <Result$cmp_gt0000> created at line 98.
+    Found 32-bit comparator less for signal <Result$cmp_lt0000> created at line 99.
+    Found 32-bit adder for signal <Score_1$add0000> created at line 170.
+    Found 32-bit adder for signal <Score_2$add0000> created at line 149.
+    Found 1-bit register for signal <SecondElapsed>.
+    Found 32-bit adder for signal <SecondElapsed$addsub0000> created at line 269.
+    Found 32-bit comparator greater for signal <SecondElapsed$cmp_gt0000> created at line 272.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred  30 Comparator(s).
+	inferred 192 Multiplexer(s).
+Unit <GameManager> synthesized.
+
+
+Synthesizing Unit <Displayer>.
+    Related source file is "D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd".
+WARNING:Xst:1305 - Output <Char_DI> is never assigned. Tied to value 00000000.
+WARNING:Xst:1305 - Output <Home> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <CursorOn> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <Result> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <Char_WE> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <Goto00> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <G1_Pos> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Ball_Pos> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <NewLine> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <ScrollEn> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <G2_Pos> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <ScrollClear> is never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <Seconds_Ten<31:4>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Seconds_Ten<3:0>> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:646 - Signal <Seconds_Left> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4x32-bit ROM for signal <counter$mux0000> created at line 61.
+    Found 9-bit subtractor for signal <counter$addsub0000> created at line 60.
+    Found 8-bit comparator lessequal for signal <counter$cmp_le0000> created at line 59.
+    Found 9-bit comparator lessequal for signal <counter$cmp_le0001> created at line 61.
+    Found 8-bit comparator lessequal for signal <R$cmp_le0000> created at line 70.
+    Found 9-bit comparator lessequal for signal <R$cmp_le0001> created at line 71.
+    Found 10-bit comparator lessequal for signal <R$cmp_le0002> created at line 71.
+    Found 11-bit comparator lessequal for signal <R$cmp_le0003> created at line 71.
+    Found 12-bit comparator lessequal for signal <R$cmp_le0004> created at line 71.
+    Found 13-bit comparator lessequal for signal <R$cmp_le0005> created at line 71.
+    Found 14-bit comparator lessequal for signal <R$cmp_le0006> created at line 71.
+    Found 15-bit comparator lessequal for signal <R$cmp_le0007> created at line 71.
+    Found 16-bit comparator lessequal for signal <R$cmp_le0008> created at line 71.
+    Found 17-bit comparator lessequal for signal <R$cmp_le0009> created at line 71.
+    Found 18-bit comparator lessequal for signal <R$cmp_le0010> created at line 71.
+    Found 19-bit comparator lessequal for signal <R$cmp_le0011> created at line 71.
+    Found 20-bit subtractor for signal <R$sub0000> created at line 71.
+    Found 9-bit subtractor for signal <sub0000$sub0000> created at line 71.
+    Found 10-bit subtractor for signal <sub0001$sub0000> created at line 71.
+    Found 11-bit subtractor for signal <sub0002$sub0000> created at line 71.
+    Found 12-bit subtractor for signal <sub0003$sub0000> created at line 71.
+    Found 13-bit subtractor for signal <sub0004$sub0000> created at line 71.
+    Found 14-bit subtractor for signal <sub0005$sub0000> created at line 71.
+    Found 15-bit subtractor for signal <sub0006$sub0000> created at line 71.
+    Found 16-bit subtractor for signal <sub0007$sub0000> created at line 71.
+    Found 17-bit subtractor for signal <sub0008$sub0000> created at line 71.
+    Found 18-bit subtractor for signal <sub0009$sub0000> created at line 71.
+    Found 19-bit subtractor for signal <sub0010$sub0000> created at line 71.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  13 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+Unit <Displayer> synthesized.
+
+
+Synthesizing Unit <Football>.
+    Related source file is "D:/Stuff/Programowanie/UCISW_Football/Football.vhf".
+Unit <Football> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x32-bit ROM                                          : 1
+# Adders/Subtractors                                   : 29
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 1
+ 12-bit subtractor                                     : 1
+ 13-bit subtractor                                     : 1
+ 14-bit subtractor                                     : 1
+ 15-bit subtractor                                     : 1
+ 16-bit subtractor                                     : 1
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+ 20-bit subtractor                                     : 1
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 6
+ 32-bit addsub                                         : 3
+ 32-bit subtractor                                     : 5
+ 9-bit subtractor                                      : 2
+# Latches                                              : 11
+ 1-bit latch                                           : 3
+ 2-bit latch                                           : 1
+ 3-bit latch                                           : 2
+ 32-bit latch                                          : 5
+# Comparators                                          : 42
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator lessequal                           : 1
+ 12-bit comparator lessequal                           : 1
+ 13-bit comparator lessequal                           : 1
+ 14-bit comparator lessequal                           : 1
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 19-bit comparator lessequal                           : 1
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greatequal                          : 4
+ 32-bit comparator greater                             : 7
+ 32-bit comparator less                                : 9
+ 32-bit comparator lessequal                           : 4
+ 32-bit comparator not equal                           : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 6
+ 32-bit 4-to-1 multiplexer                             : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <PS2_Rx.ngc>.
+Reading core <LCD1x64.ngc>.
+Reading core <VGAtxt48x20.ngc>.
+Loading core <PS2_Rx> for timing and area information for instance <XLXI_1>.
+Loading core <LCD1x64> for timing and area information for instance <XLXI_4>.
+Loading core <VGAtxt48x20> for timing and area information for instance <XLXI_5>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x32-bit ROM                                          : 1
+# Adders/Subtractors                                   : 29
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 1
+ 12-bit subtractor                                     : 1
+ 13-bit subtractor                                     : 1
+ 14-bit subtractor                                     : 1
+ 15-bit subtractor                                     : 1
+ 16-bit subtractor                                     : 1
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 6
+ 32-bit addsub                                         : 3
+ 32-bit subtractor                                     : 5
+ 4-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 2
+# Latches                                              : 11
+ 1-bit latch                                           : 3
+ 2-bit latch                                           : 1
+ 3-bit latch                                           : 2
+ 32-bit latch                                          : 5
+# Comparators                                          : 42
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator lessequal                           : 1
+ 12-bit comparator lessequal                           : 1
+ 13-bit comparator lessequal                           : 1
+ 14-bit comparator lessequal                           : 1
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 19-bit comparator lessequal                           : 1
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greatequal                          : 4
+ 32-bit comparator greater                             : 7
+ 32-bit comparator less                                : 9
+ 32-bit comparator lessequal                           : 4
+ 32-bit comparator not equal                           : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 6
+ 32-bit 4-to-1 multiplexer                             : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit GameManager : the following signal(s) form a combinatorial loop: Mcompar_ball_x_cmp_eq0001_cy<7>, BallDirection_0_cmp_ge0000, Mcompar_ball_x_cmp_eq0001_cy<12>, Mcompar_ball_x_cmp_eq0001_cy<6>, Mcompar_G1_Score_cmp_gt0000_lut<0>, Mcompar_ball_x_cmp_eq0001_cy<15>, Mcompar_G2_Score_cmp_gt0000_cy<5>, Mcompar_BallDirection_0_cmp_ge0000_cy<3>, Madd_ball_x_addsub0000_lut<0>, Mcompar_BallDirection_0_cmp_ge0000_cy<1>, ball_y_mux0004<1>, Mcompar_G2_Score_cmp_gt0000_cy<2>, Mcompar_ball_x_cmp_eq0001_cy<0>, Mcompar_G2_Score_cmp_gt0000_cy<6>, Mcompar_ball_x_cmp_eq0001_cy<4>, Mcompar_BallDirection_0_cmp_ge0000_cy<4>, Mcompar_BallDirection_0_cmp_le0000_cy<3>, Mcompar_BallDirection_0_cmp_le0000_cy<2>, Mcompar_ball_x_cmp_eq0001_cy<3>, BallDirection_0_cmp_le0000, Mcompar_ball_x_cmp_eq0001_cy<2>, Mcompar_G1_Score_cmp_gt0000_cy<0>, Mcompar_G1_Score_cmp_gt0000_cy<5>, Mcompar_BallDirection_0_cmp_le0000_cy<4>, G2_Score_and0000, Mcompar_G2_Score_cmp_gt0000_cy<4>, Mcompar_BallDirection_0_cmp_le0000_cy<6>, Mcompar_BallDirection_0_cmp_ge0000_cy<9>, Mcompar_BallDirection_0_cmp_ge0000_cy<6>, ball_x_mux0004<0>1, Mcompar_BallDirection_0_cmp_le0000_cy<0>, Mcompar_G2_Score_cmp_gt0000_cy<1>, Mcompar_BallDirection_0_cmp_ge0000_cy<0>, Mcompar_G1_Score_cmp_gt0000_cy<2>, ball_x<3>, Maddsub_ball_y_mux0000_cy<1>, Maddsub_ball_y_mux0000_cy<0>, Mcompar_BallDirection_0_cmp_ge0000_lut<0>, ball_y_mux0005<0>, Mcompar_BallDirection_0_cmp_le0000_cy<7>, Mcompar_BallDirection_0_cmp_le0000_cy<1>, Mcompar_ball_x_cmp_eq0001_cy<1>, Mcompar_G2_Score_cmp_gt0000_cy<7>, Mcompar_BallDirection_0_cmp_le0000_lut<0>, Mcompar_ball_x_cmp_eq0001_cy<10>, Maddsub_ball_y_mux0000_cy<2>, Mcompar_ball_x_cmp_eq0001_cy<14>, Mcompar_ball_x_cmp_eq0001_cy<9>, Mmux_ball_x_mux0006, Mcompar_ball_x_cmp_eq0001_cy<13>, ball_x_mux0004<0>, ball_y<0>_mand1, Mcompar_BallDirection_0_cmp_ge0000_cy<7>, ball_y_mux0002<3>, Mcompar_G1_Score_cmp_gt0000_cy<7>, Mcompar_G1_Score_cmp_gt0000_cy<6>, G1_Score_and0000, G2_Score_cmp_gt0000, Mcompar_G2_Score_cmp_gt0000_cy<0>, ball_x_addsub0000<0>, ball_x_mux0006<0>, Mcompar_ball_x_cmp_eq0001_cy<11>, ball_y_mux0000<3>, Mcompar_ball_x_cmp_eq0001_cy<5>, Mcompar_G1_Score_cmp_gt0000_cy<4>, Mcompar_ball_x_cmp_eq0001_lut<0>, Mcompar_G2_Score_cmp_gt0000_cy<3>, Mcompar_BallDirection_0_cmp_ge0000_cy<8>, Mcompar_G1_Score_cmp_gt0000_cy<3>, G1_Score_cmp_gt0000, Mcompar_BallDirection_0_cmp_ge0000_cy<5>, Mcompar_BallDirection_0_cmp_ge0000_cy<2>, Mcompar_G1_Score_cmp_gt0000_cy<1>, Mcompar_ball_x_cmp_eq0001_cy<8>, ball_y_mux0006<0>, Mcompar_BallDirection_0_cmp_le0000_cy<5>, Mcompar_G2_Score_cmp_gt0000_lut<0>.
+WARNING:Xst:2170 - Unit GameManager : the following signal(s) form a combinatorial loop: ball_y_mux0004<2>, Madd_ball_x_addsub0000_cy<1>, Mcompar_G1_Score_cmp_ge0000_cy<7>, Mcompar_ball_x_cmp_ge0000_cy<8>, Mcompar_ball_x_cmp_ge0000_cy<1>, ball_y_mux0005<2>, Mcompar_G1_Score_cmp_ge0000_cy<0>, Mcompar_G2_Score_cmp_le0000_cy<1>, ball_x_and0001, Mcompar_G1_Score_cmp_ge0000_cy<3>, Mcompar_ball_x_cmp_ge0000_cy<0>, Mcompar_G2_Score_cmp_le0000_cy<7>, Mcompar_G2_Score_cmp_le0000_cy<2>, ball_x<0>, Mcompar_ball_x_cmp_ge0000_cy<3>, ball_y_mux0006<2>, G1_Score_cmp_ge0000, ball_x_cmp_ge0000, ball_y_mux0000<2>, Mcompar_G1_Score_cmp_ge0000_cy<8>, Mcompar_G1_Score_cmp_ge0000_cy<9>, Mcompar_ball_x_cmp_ge0000_cy<6>, Mcompar_G1_Score_cmp_ge0000_cy<1>, Maddsub_ball_y_mux0000_lut<2>, ball_x_addsub0000<2>, ball_x<2>, G2_Score_cmp_le0000, ball_x_mux0002<1>, Mcompar_G2_Score_cmp_le0000_cy<9>, Mcompar_G2_Score_cmp_le0000_cy<0>, Mcompar_G2_Score_cmp_le0000_cy<8>, ball_x_mux0004<1>, Mcompar_G2_Score_cmp_le0000_cy<3>, Mcompar_G2_Score_cmp_le0000_cy<6>, Mcompar_ball_x_cmp_ge0000_cy<9>, Mcompar_ball_x_cmp_ge0000_cy<4>, ball_x_mux0000<0>, Maddsub_ball_x_mux0000_lut<0>, Mcompar_ball_x_cmp_ge0000_cy<7>, Mcompar_ball_x_cmp_ge0000_cy<2>, ball_x_mux0006<2>, Mcompar_G2_Score_cmp_le0000_cy<5>, ball_y_mux0002<2>1, Mcompar_G1_Score_cmp_ge0000_cy<6>, Mcompar_G1_Score_cmp_ge0000_lut<0>, Mmux_ball_x_mux000624, Mcompar_G2_Score_cmp_le0000_lut<0>, Mcompar_G1_Score_cmp_ge0000_cy<5>, Mcompar_G1_Score_cmp_ge0000_cy<4>, Mcompar_ball_x_cmp_ge0000_cy<5>, Mcompar_G2_Score_cmp_le0000_cy<4>, Mcompar_G1_Score_cmp_ge0000_cy<2>.
+WARNING:Xst:2170 - Unit GameManager : the following signal(s) form a combinatorial loop: ball_y_mux0000<4>, ball_x_mux0006<1>, Mcompar_BallDirection_2_cmp_ge0000_cy<3>, Mcompar_BallDirection_2_cmp_ge0000_cy<2>, Mcompar_BallDirection_2_cmp_ge0000_cy<4>, BallDirection_2_cmp_ge0000, Mmux_ball_x_mux000611, ball_y_mux0002<4>, Mcompar_BallDirection_2_cmp_ge0000_cy<6>, ball_y_mux0006<4>, Maddsub_ball_y_mux0000_lut<4>, Mcompar_BallDirection_2_cmp_ge0000_cy<9>, ball_x_and0000, Mcompar_BallDirection_2_cmp_ge0000_cy<8>, Mcompar_BallDirection_2_cmp_ge0000_cy<7>, Mcompar_BallDirection_2_cmp_ge0000_cy<5>, ball_y<4>, ball_y_mux0005<4>, ball_y_mux0004<4>, ball_x<1>.
+WARNING:Xst:2170 - Unit GameManager : the following signal(s) form a combinatorial loop: Mcompar_ball_x_cmp_eq0000_lut<2>, Mcompar_ball_x_cmp_eq0000_cy<13>, ball_x_mux0006<4>, ball_x_mux0004<4>1, ball_x_mux0000<4>, BallDirection_2_mux0007, Mcompar_ball_x_cmp_eq0000_cy<11>, Mcompar_ball_x_cmp_eq0000_cy<4>, ball_x<4>, ball_x_mux0002<4>1, Mcompar_ball_x_cmp_eq0000_cy<3>, Mcompar_ball_x_cmp_eq0000_cy<12>, ball_x_addsub0000<4>, Mcompar_ball_x_cmp_eq0000_cy<6>, ball_x_mux0004<4>, Mcompar_ball_x_cmp_eq0000_cy<9>, Mcompar_ball_x_cmp_eq0000_cy<2>, Mcompar_ball_x_cmp_eq0000_cy<10>, Mcompar_ball_x_cmp_eq0000_cy<5>, Mcompar_ball_x_cmp_eq0000_cy<8>, Maddsub_ball_x_mux0000_lut<4>, Mcompar_ball_x_cmp_eq0000_cy<7>, Mmux_ball_x_mux000632, Mcompar_ball_x_cmp_eq0000_cy<14>, Mcompar_ball_x_cmp_eq0000_cy<15>.
+WARNING:Xst:2170 - Unit GameManager : the following signal(s) form a combinatorial loop: Maddsub_ball_y_mux0000_lut<5>, Mcompar_ball_x_cmp_le0000_cy<8>, ball_y_mux0002<5>1, BallDirection_2_not0001, Mcompar_ball_x_cmp_le0000_cy<7>, Mcompar_ball_x_cmp_le0000_cy<2>, Mcompar_ball_x_cmp_le0000_cy<5>, Mcompar_ball_x_cmp_le0000_cy<4>, Mcompar_ball_x_cmp_le0000_cy<3>, ball_y_mux0000<5>, Mcompar_ball_x_cmp_le0000_lut<2>, ball_y_mux0005<5>, ball_y_mux0004<5>, Mcompar_ball_x_cmp_le0000_cy<6>, ball_x_cmp_le0000, ball_y_mux0006<5>.
+
+Optimizing unit <Football> ...
+
+Optimizing unit <Displayer> ...
+
+Optimizing unit <GameManager> ...
+WARNING:Xst:2677 - Node <XLXI_2/Result_1> of sequential type is unconnected in block <Football>.
+WARNING:Xst:2677 - Node <XLXI_2/Result_0> of sequential type is unconnected in block <Football>.
+
+Mapping all equations...
+WARNING:Xst:2170 - Unit Football : the following signal(s) form a combinatorial loop: XLXI_2/ball_y_mux0005<6>, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_cy<2>, XLXI_2/BallDirection_2_mux0007, XLXI_2/ball_y_mux0000<6>, XLXI_2/Maddsub_ball_y_mux0000_lut<6>, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_cy<8>, XLXI_2/ball_y_mux0006<6>, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_cy<4>, N125, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_cy<5>, XLXI_2/N6, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_cy<7>, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_cy<6>, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_cy<3>, XLXI_2/Mcompar_BallDirection_2_cmp_le0000_lut<2>, XLXI_2/ball_y_mux0004<6>, XLXI_2/BallDirection_2_cmp_le0000.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Football, actual ratio is 19.
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_4> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_4> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_4> is equivalent to the following FF/Latch : <State_16_1> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_4> is equivalent to the following 4 FFs/Latches : <cntDigit_0_1> <cntDigit_0_2> <cntDigit_0_3> <cntDigit_0_4> 
+INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_4> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
+INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_4> is equivalent to the following FF/Latch : <State_16_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Football.ngr
+Top Level Output File Name         : Football
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 3084
+#      AND2                        : 1
+#      AND3                        : 4
+#      AND3B1                      : 4
+#      BUF                         : 3
+#      GND                         : 4
+#      INV                         : 269
+#      LUT1                        : 213
+#      LUT2                        : 308
+#      LUT2_L                      : 8
+#      LUT3                        : 265
+#      LUT3_D                      : 29
+#      LUT3_L                      : 5
+#      LUT4                        : 490
+#      LUT4_D                      : 8
+#      LUT4_L                      : 20
+#      MULT_AND                    : 31
+#      MUXCY                       : 780
+#      MUXF5                       : 77
+#      MUXF5_L                     : 2
+#      MUXF6                       : 16
+#      MUXF7                       : 5
+#      OR2                         : 5
+#      VCC                         : 4
+#      XOR2                        : 1
+#      XORCY                       : 532
+# FlipFlops/Latches                : 391
+#      FD                          : 46
+#      FDE                         : 36
+#      FDR                         : 66
+#      FDRE                        : 48
+#      FDRS                        : 11
+#      FDRSE                       : 3
+#      FDS                         : 11
+#      FDSE                        : 1
+#      LD                          : 1
+#      LDC                         : 58
+#      LDC_1                       : 24
+#      LDCE                        : 65
+#      LDCP                        : 1
+#      LDE                         : 6
+#      LDP                         : 6
+#      LDP_1                       : 8
+# RAMS                             : 2
+#      RAMB16_S9                   : 1
+#      RAMB16_S9_S9                : 1
+# Shift Registers                  : 3
+#      SRL16                       : 3
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 3
+#      IOBUF                       : 4
+#      OBUF                        : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      882  out of   4656    18%  
+ Number of Slice Flip Flops:            391  out of   9312     4%  
+ Number of 4 input LUTs:               1618  out of   9312    17%  
+    Number used as logic:              1615
+    Number used as Shift registers:       3
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    232     7%  
+ Number of BRAMs:                         2  out of     20    10%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                                                        | Clock buffer(FF name)          | Load  |
+------------------------------------------------------------------------------------+--------------------------------+-------+
+Clk                                                                                 | BUFGP                          | 227   |
+XLXI_1/DO_Rdy1(XLXI_1/ResDORdy/Mxor_DOut_Result1:O)                                 | BUFG(*)(XLXI_2/player_1_x_31)  | 64    |
+XLXI_2/G1_Score_cmp_ge0000(XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<10>:O)             | NONE(*)(XLXI_2/Score_1_31)     | 35    |
+XLXI_2/G2_Score_cmp_le0000(XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<10>:O)             | NONE(*)(XLXI_2/Score_2_31)     | 35    |
+XLXI_2/IsFinished1                                                                  | BUFG                           | 32    |
+XLXI_2/BallDirection_0_cmp_le0000(XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<8>:O)| NONE(*)(XLXI_2/BallDirection_0)| 1     |
+XLXI_2/Result_or0000(XLXI_2/Result_or0000596:O)                                     | NONE(*)(XLXI_2/IsFinished)     | 1     |
+XLXI_2/BallDirection_2_not0001(XLXI_2/BallDirection_2_not0001:O)                    | NONE(*)(XLXI_2/BallDirection_2)| 1     |
+------------------------------------------------------------------------------------+--------------------------------+-------+
+(*) These 6 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------+-----------------------------+-------+
+Control Signal                                                     | Buffer(FF name)             | Load  |
+-------------------------------------------------------------------+-----------------------------+-------+
+RST                                                                | IBUF                        | 161   |
+XLXI_2/BallDirection_0__and0000(XLXI_2/BallDirection_0__and00001:O)| NONE(XLXI_2/BallDirection_0)| 1     |
+XLXI_2/BallDirection_0__or0000(XLXI_2/BallDirection_0__or00001:O)  | NONE(XLXI_2/BallDirection_0)| 1     |
+-------------------------------------------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 30.783ns (Maximum Frequency: 32.486MHz)
+   Minimum input arrival time before clock: 87.066ns
+   Maximum output required time after clock: 5.998ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 9.574ns (frequency: 104.450MHz)
+  Total number of paths / destination ports: 4465 / 465
+-------------------------------------------------------------------------
+Delay:               9.574ns (Levels of Logic = 9)
+  Source:            XLXI_5/XLXI_147/Mrom_DO_rom0000 (RAM)
+  Destination:       XLXI_5/XLXI_115/XLXI_155/PixOut (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: XLXI_5/XLXI_147/Mrom_DO_rom0000 to XLXI_5/XLXI_115/XLXI_155/PixOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S9:CLK->DO6    1   2.800   0.420  XLXI_147/Mrom_DO_rom0000 (XLXN_899<6>)
+     begin scope: 'XLXI_115/XLXI_1'
+     begin scope: 'I_M01'
+     AND3:I0->O            1   0.704   0.420  I_36_30 (M1)
+     OR2:I0->O             1   0.704   0.000  I_36_38 (O)
+     end scope: 'I_M01'
+     MUXF5_L:I0->LO        1   0.321   0.000  I_M03 (M03)
+     MUXF6:I0->O           1   0.521   0.420  I_O (O)
+     end scope: 'XLXI_115/XLXI_1'
+     XOR2:I0->O            1   0.704   0.420  XLXI_115/XLXI_141 (XLXI_115/XLXN_727)
+     AND2:I1->O            1   0.704   0.424  XLXI_115/XLXI_154 (XLXI_115/XLXN_762)
+     LUT4:I3->O            1   0.704   0.000  XLXI_115/XLXI_155/iPixOut103 (XLXI_115/XLXI_155/iPixOut)
+     FD:D                      0.308          XLXI_115/XLXI_155/PixOut
+    ----------------------------------------
+    Total                      9.574ns (7.470ns logic, 2.104ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_1/DO_Rdy1'
+  Clock period: 8.599ns (frequency: 116.298MHz)
+  Total number of paths / destination ports: 10080 / 64
+-------------------------------------------------------------------------
+Delay:               8.599ns (Levels of Logic = 15)
+  Source:            XLXI_2/player_1_x_2 (LATCH)
+  Destination:       XLXI_2/player_1_x_31 (LATCH)
+  Source Clock:      XLXI_1/DO_Rdy1 falling
+  Destination Clock: XLXI_1/DO_Rdy1 falling
+
+  Data Path: XLXI_2/player_1_x_2 to XLXI_2/player_1_x_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q              6   0.676   0.844  XLXI_2/player_1_x_2 (XLXI_2/player_1_x_2)
+     LUT1:I0->O            1   0.704   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<0>_rt (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<0> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<1> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<2> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<3> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<4> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<5> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<6> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<7> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<8> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<9> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           3   0.459   0.566  XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<10> (XLXI_2/Mcompar_player_1_x_cmp_lt0000_cy<10>)
+     LUT3:I2->O           27   0.704   1.340  XLXI_2/player_1_x_mux0003<10>11 (XLXI_2/N13)
+     LUT4:I1->O            1   0.704   0.595  XLXI_2/player_1_x_mux0003<9>_SW0 (N13)
+     LUT3:I0->O            1   0.704   0.000  XLXI_2/player_1_x_mux0003<9> (XLXI_2/player_1_x_mux0003<9>)
+     LDC:D                     0.308          XLXI_2/player_1_x_9
+    ----------------------------------------
+    Total                      8.599ns (5.254ns logic, 3.345ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/G1_Score_cmp_ge0000'
+  Clock period: 5.429ns (frequency: 184.196MHz)
+  Total number of paths / destination ports: 534 / 35
+-------------------------------------------------------------------------
+Delay:               5.429ns (Levels of Logic = 32)
+  Source:            XLXI_2/Score_1_1 (LATCH)
+  Destination:       XLXI_2/Score_1_31 (LATCH)
+  Source Clock:      XLXI_2/G1_Score_cmp_ge0000 falling
+  Destination Clock: XLXI_2/G1_Score_cmp_ge0000 falling
+
+  Data Path: XLXI_2/Score_1_1 to XLXI_2/Score_1_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             4   0.676   0.762  XLXI_2/Score_1_1 (XLXI_2/Score_1_1)
+     LUT1:I0->O            1   0.704   0.000  XLXI_2/Madd_Score_1_add0000_cy<1>_rt (XLXI_2/Madd_Score_1_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Madd_Score_1_add0000_cy<1> (XLXI_2/Madd_Score_1_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<2> (XLXI_2/Madd_Score_1_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<3> (XLXI_2/Madd_Score_1_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<4> (XLXI_2/Madd_Score_1_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<5> (XLXI_2/Madd_Score_1_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<6> (XLXI_2/Madd_Score_1_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<7> (XLXI_2/Madd_Score_1_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<8> (XLXI_2/Madd_Score_1_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<9> (XLXI_2/Madd_Score_1_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<10> (XLXI_2/Madd_Score_1_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<11> (XLXI_2/Madd_Score_1_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<12> (XLXI_2/Madd_Score_1_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<13> (XLXI_2/Madd_Score_1_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<14> (XLXI_2/Madd_Score_1_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<15> (XLXI_2/Madd_Score_1_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<16> (XLXI_2/Madd_Score_1_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<17> (XLXI_2/Madd_Score_1_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<18> (XLXI_2/Madd_Score_1_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<19> (XLXI_2/Madd_Score_1_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<20> (XLXI_2/Madd_Score_1_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<21> (XLXI_2/Madd_Score_1_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<22> (XLXI_2/Madd_Score_1_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<23> (XLXI_2/Madd_Score_1_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<24> (XLXI_2/Madd_Score_1_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<25> (XLXI_2/Madd_Score_1_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<26> (XLXI_2/Madd_Score_1_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<27> (XLXI_2/Madd_Score_1_add0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<28> (XLXI_2/Madd_Score_1_add0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<29> (XLXI_2/Madd_Score_1_add0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Madd_Score_1_add0000_cy<30> (XLXI_2/Madd_Score_1_add0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.000  XLXI_2/Madd_Score_1_add0000_xor<31> (XLXI_2/Score_1_add0000<31>)
+     LDCE:D                    0.308          XLXI_2/Score_1_31
+    ----------------------------------------
+    Total                      5.429ns (4.667ns logic, 0.762ns route)
+                                       (86.0% logic, 14.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/G2_Score_cmp_le0000'
+  Clock period: 5.429ns (frequency: 184.196MHz)
+  Total number of paths / destination ports: 534 / 35
+-------------------------------------------------------------------------
+Delay:               5.429ns (Levels of Logic = 32)
+  Source:            XLXI_2/Score_2_1 (LATCH)
+  Destination:       XLXI_2/Score_2_31 (LATCH)
+  Source Clock:      XLXI_2/G2_Score_cmp_le0000 falling
+  Destination Clock: XLXI_2/G2_Score_cmp_le0000 falling
+
+  Data Path: XLXI_2/Score_2_1 to XLXI_2/Score_2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             4   0.676   0.762  XLXI_2/Score_2_1 (XLXI_2/Score_2_1)
+     LUT1:I0->O            1   0.704   0.000  XLXI_2/Madd_Score_2_add0000_cy<1>_rt (XLXI_2/Madd_Score_2_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Madd_Score_2_add0000_cy<1> (XLXI_2/Madd_Score_2_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<2> (XLXI_2/Madd_Score_2_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<3> (XLXI_2/Madd_Score_2_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<4> (XLXI_2/Madd_Score_2_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<5> (XLXI_2/Madd_Score_2_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<6> (XLXI_2/Madd_Score_2_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<7> (XLXI_2/Madd_Score_2_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<8> (XLXI_2/Madd_Score_2_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<9> (XLXI_2/Madd_Score_2_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<10> (XLXI_2/Madd_Score_2_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<11> (XLXI_2/Madd_Score_2_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<12> (XLXI_2/Madd_Score_2_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<13> (XLXI_2/Madd_Score_2_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<14> (XLXI_2/Madd_Score_2_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<15> (XLXI_2/Madd_Score_2_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<16> (XLXI_2/Madd_Score_2_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<17> (XLXI_2/Madd_Score_2_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<18> (XLXI_2/Madd_Score_2_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<19> (XLXI_2/Madd_Score_2_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<20> (XLXI_2/Madd_Score_2_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<21> (XLXI_2/Madd_Score_2_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<22> (XLXI_2/Madd_Score_2_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<23> (XLXI_2/Madd_Score_2_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<24> (XLXI_2/Madd_Score_2_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<25> (XLXI_2/Madd_Score_2_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<26> (XLXI_2/Madd_Score_2_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<27> (XLXI_2/Madd_Score_2_add0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<28> (XLXI_2/Madd_Score_2_add0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<29> (XLXI_2/Madd_Score_2_add0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Madd_Score_2_add0000_cy<30> (XLXI_2/Madd_Score_2_add0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.000  XLXI_2/Madd_Score_2_add0000_xor<31> (XLXI_2/Score_2_add0000<31>)
+     LDCE:D                    0.308          XLXI_2/Score_2_31
+    ----------------------------------------
+    Total                      5.429ns (4.667ns logic, 0.762ns route)
+                                       (86.0% logic, 14.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/IsFinished1'
+  Clock period: 5.834ns (frequency: 171.409MHz)
+  Total number of paths / destination ports: 528 / 32
+-------------------------------------------------------------------------
+Delay:               5.834ns (Levels of Logic = 33)
+  Source:            XLXI_2/GameTimeLeft_0 (LATCH)
+  Destination:       XLXI_2/GameTimeLeft_31 (LATCH)
+  Source Clock:      XLXI_2/IsFinished1 rising
+  Destination Clock: XLXI_2/IsFinished1 rising
+
+  Data Path: XLXI_2/GameTimeLeft_0 to XLXI_2/GameTimeLeft_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP_1:G->Q           11   0.676   1.108  XLXI_2/GameTimeLeft_0 (XLXI_2/GameTimeLeft_0)
+     LUT1:I0->O            1   0.704   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<0>_rt (XLXI_2/Msub_GameTimeLeft_sub0001_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<0> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<1> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<2> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<3> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<4> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<5> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<6> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<7> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<8> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<9> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<10> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<11> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<12> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<13> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<14> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<15> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<16> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<17> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<18> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<19> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<20> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<21> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<22> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<23> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<24> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<25> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<26> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<27> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<28> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<29> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_cy<30> (XLXI_2/Msub_GameTimeLeft_sub0001_cy<30>)
+     XORCY:CI->O           2   0.804   0.000  XLXI_2/Msub_GameTimeLeft_sub0001_xor<31> (XLXI_2/GameTimeLeft_sub0001<31>)
+     LDC_1:D                   0.308          XLXI_2/GameTimeLeft_31
+    ----------------------------------------
+    Total                      5.834ns (4.726ns logic, 1.108ns route)
+                                       (81.0% logic, 19.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/BallDirection_0_cmp_le0000'
+  Clock period: 21.625ns (frequency: 46.243MHz)
+  Total number of paths / destination ports: 1248 / 1
+-------------------------------------------------------------------------
+Delay:               21.625ns (Levels of Logic = 49)
+  Source:            XLXI_2/BallDirection_0 (LATCH)
+  Destination:       XLXI_2/BallDirection_0 (LATCH)
+  Source Clock:      XLXI_2/BallDirection_0_cmp_le0000 falling
+  Destination Clock: XLXI_2/BallDirection_0_cmp_le0000 falling
+
+  Data Path: XLXI_2/BallDirection_0 to XLXI_2/BallDirection_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q            35   0.676   1.263  XLXI_2/BallDirection_0 (XLXI_2/BallDirection_0)
+     INV:I->O              2   0.704   0.526  XLXI_2/ball_y_mux00082_INV_0 (XLXI_2/ball_y_mux0008)
+     LUT2:I1->O            1   0.704   0.000  XLXI_2/Maddsub_ball_y_mux0000_lut<4> (XLXI_2/Maddsub_ball_y_mux0000_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<4> (XLXI_2/Maddsub_ball_y_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<5> (XLXI_2/Maddsub_ball_y_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<6> (XLXI_2/Maddsub_ball_y_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<7> (XLXI_2/Maddsub_ball_y_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<8> (XLXI_2/Maddsub_ball_y_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<9> (XLXI_2/Maddsub_ball_y_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<10> (XLXI_2/Maddsub_ball_y_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<11> (XLXI_2/Maddsub_ball_y_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<12> (XLXI_2/Maddsub_ball_y_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<13> (XLXI_2/Maddsub_ball_y_mux0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<14> (XLXI_2/Maddsub_ball_y_mux0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<15> (XLXI_2/Maddsub_ball_y_mux0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<16> (XLXI_2/Maddsub_ball_y_mux0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<17> (XLXI_2/Maddsub_ball_y_mux0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<18> (XLXI_2/Maddsub_ball_y_mux0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<19> (XLXI_2/Maddsub_ball_y_mux0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<20> (XLXI_2/Maddsub_ball_y_mux0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<21> (XLXI_2/Maddsub_ball_y_mux0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<22> (XLXI_2/Maddsub_ball_y_mux0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<23> (XLXI_2/Maddsub_ball_y_mux0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<24> (XLXI_2/Maddsub_ball_y_mux0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<25> (XLXI_2/Maddsub_ball_y_mux0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<26> (XLXI_2/Maddsub_ball_y_mux0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<27> (XLXI_2/Maddsub_ball_y_mux0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<28> (XLXI_2/Maddsub_ball_y_mux0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<29> (XLXI_2/Maddsub_ball_y_mux0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<30> (XLXI_2/Maddsub_ball_y_mux0000_cy<30>)
+     XORCY:CI->O           4   0.804   0.666  XLXI_2/Maddsub_ball_y_mux0000_xor<31> (XLXI_2/ball_y_mux0000<31>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004251 (XLXI_2/ball_y_mux0004<31>)
+     LUT2:I0->O            4   0.704   0.587  XLXI_2/ball_y_mux0005<31>1 (XLXI_2/ball_y_mux0005<31>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>1_INV_0 (XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>)
+     MUXCY:S->O           38   0.864   1.439  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_cy<10> (XLXI_2/BallDirection_0_cmp_ge0000)
+     LUT2:I0->O            3   0.704   0.566  XLXI_2/ball_y_mux0006<1>1 (XLXI_2/ball_y_mux0006<1>)
+     LUT3:I2->O            1   0.704   0.000  XLXI_2/Maddsub_ball_y_mux0000_lut<1> (XLXI_2/Maddsub_ball_y_mux0000_lut<1>)
+     XORCY:LI->O           3   0.527   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<1> (XLXI_2/ball_y_mux0000<1>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004121 (XLXI_2/ball_y_mux0004<1>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7>)
+     MUXCY:CI->O          36   0.331   1.298  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<8> (XLXI_2/BallDirection_0_cmp_le0000)
+     LUT3:I2->O            1   0.704   0.000  XLXI_2/BallDirection_0_mux00031 (XLXI_2/BallDirection_0_mux0003)
+     LDCP:D                    0.308          XLXI_2/BallDirection_0
+    ----------------------------------------
+    Total                     21.625ns (13.425ns logic, 8.200ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/Result_or0000'
+  Clock period: 3.483ns (frequency: 287.109MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               3.483ns (Levels of Logic = 1)
+  Source:            XLXI_2/IsFinished (LATCH)
+  Destination:       XLXI_2/IsFinished (LATCH)
+  Source Clock:      XLXI_2/Result_or0000 falling
+  Destination Clock: XLXI_2/Result_or0000 falling
+
+  Data Path: XLXI_2/IsFinished to XLXI_2/IsFinished
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q            21   0.676   1.128  XLXI_2/IsFinished (XLXI_2/IsFinished1)
+     INV:I->O              1   0.704   0.420  XLXI_2/IsFinished_0_not00001_INV_0 (XLXI_2/IsFinished_0_not0000)
+     LDCE:GE                   0.555          XLXI_2/IsFinished
+    ----------------------------------------
+    Total                      3.483ns (1.935ns logic, 1.548ns route)
+                                       (55.6% logic, 44.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/BallDirection_2_not0001'
+  Clock period: 30.783ns (frequency: 32.486MHz)
+  Total number of paths / destination ports: 54181 / 1
+-------------------------------------------------------------------------
+Delay:               30.783ns (Levels of Logic = 85)
+  Source:            XLXI_2/BallDirection_2 (LATCH)
+  Destination:       XLXI_2/BallDirection_2 (LATCH)
+  Source Clock:      XLXI_2/BallDirection_2_not0001 falling
+  Destination Clock: XLXI_2/BallDirection_2_not0001 falling
+
+  Data Path: XLXI_2/BallDirection_2 to XLXI_2/BallDirection_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.676   0.633  XLXI_2/BallDirection_2 (XLXI_2/BallDirection_2)
+     INV:I->O             22   0.704   1.243  XLXI_2/ball_x_mux00112_2_INV_0 (XLXI_2/ball_x_mux00112_1)
+     LUT2:I1->O            1   0.704   0.000  XLXI_2/Maddsub_ball_x_mux0000_lut<1> (XLXI_2/Maddsub_ball_x_mux0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<1> (XLXI_2/Maddsub_ball_x_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<2> (XLXI_2/Maddsub_ball_x_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<3> (XLXI_2/Maddsub_ball_x_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<4> (XLXI_2/Maddsub_ball_x_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<5> (XLXI_2/Maddsub_ball_x_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<6> (XLXI_2/Maddsub_ball_x_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<7> (XLXI_2/Maddsub_ball_x_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<8> (XLXI_2/Maddsub_ball_x_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<9> (XLXI_2/Maddsub_ball_x_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<10> (XLXI_2/Maddsub_ball_x_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<11> (XLXI_2/Maddsub_ball_x_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<12> (XLXI_2/Maddsub_ball_x_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<13> (XLXI_2/Maddsub_ball_x_mux0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<14> (XLXI_2/Maddsub_ball_x_mux0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<15> (XLXI_2/Maddsub_ball_x_mux0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<16> (XLXI_2/Maddsub_ball_x_mux0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<17> (XLXI_2/Maddsub_ball_x_mux0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<18> (XLXI_2/Maddsub_ball_x_mux0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<19> (XLXI_2/Maddsub_ball_x_mux0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<20> (XLXI_2/Maddsub_ball_x_mux0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<21> (XLXI_2/Maddsub_ball_x_mux0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<22> (XLXI_2/Maddsub_ball_x_mux0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<23> (XLXI_2/Maddsub_ball_x_mux0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<24> (XLXI_2/Maddsub_ball_x_mux0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<25> (XLXI_2/Maddsub_ball_x_mux0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<26> (XLXI_2/Maddsub_ball_x_mux0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<27> (XLXI_2/Maddsub_ball_x_mux0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<28> (XLXI_2/Maddsub_ball_x_mux0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<29> (XLXI_2/Maddsub_ball_x_mux0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<30> (XLXI_2/Maddsub_ball_x_mux0000_cy<30>)
+     XORCY:CI->O           5   0.804   0.808  XLXI_2/Maddsub_ball_x_mux0000_xor<31> (XLXI_2/ball_x_mux0000<31>)
+     LUT3:I0->O            1   0.704   0.424  XLXI_2/ball_x_mux0004<31>_inv1 (XLXI_2/ball_x_mux0004<31>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0000_lut<15> (XLXI_2/Mcompar_ball_x_cmp_eq0000_lut<15>)
+     MUXCY:S->O            1   0.864   0.595  XLXI_2/Mcompar_ball_x_cmp_eq0000_cy<15> (XLXI_2/Mcompar_ball_x_cmp_eq0000_cy<15>)
+     LUT3:I0->O           37   0.704   1.343  XLXI_2/N61 (XLXI_2/N6)
+     LUT4:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_x_mux0006226 (XLXI_2/ball_x_mux0006<0>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_lut<0> (XLXI_2/Mcompar_ball_x_cmp_eq0001_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<0> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<1> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<2> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<3> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<4> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<5> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<6> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<7> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<8> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<9> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<10> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<11> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<12> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<13> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<14> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<14>)
+     MUXCY:CI->O           2   0.459   0.622  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<15> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<15>)
+     LUT3_D:I0->LO         1   0.704   0.275  XLXI_2/BallDirection_2_mux000711 (N196)
+     LUT4:I0->O            1   0.704   0.595  XLXI_2/ball_x_mux0009<0>1 (XLXN_7<4>)
+     LUT2:I0->O            1   0.704   0.000  XLXI_2/Maddsub_ball_x_mux0000_lut<0> (XLXI_2/Maddsub_ball_x_mux0000_lut<0>)
+     XORCY:LI->O           3   0.527   0.531  XLXI_2/Maddsub_ball_x_mux0000_xor<0> (XLXI_2/ball_x_mux0000<0>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_lut<0>_INV_0 (XLXI_2/Mcompar_G2_Score_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<0> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<1> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<2> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<3> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<4> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<5> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<6> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<7> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<8> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<9> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<9>)
+     MUXCY:CI->O         159   0.331   1.477  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<10> (XLXI_2/G2_Score_cmp_le0000)
+     LUT2:I0->O            3   0.704   0.706  XLXI_2/Mmux_ball_x_mux0002121 (XLXI_2/ball_x_mux0002<1>)
+     LUT3:I0->O            1   0.704   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_lut<0> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<0> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<1> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<2> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<3> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<4> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<5> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<6> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<7> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<8> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<9> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<9>)
+     MUXCY:CI->O         131   0.331   1.297  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<10> (XLXI_2/G1_Score_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  XLXI_2/BallDirection_2_mux0007 (XLXI_2/BallDirection_2_mux0007)
+     LD:D                      0.308          XLXI_2/BallDirection_2
+    ----------------------------------------
+    Total                     30.783ns (19.611ns logic, 11.172ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 553065621 / 49
+-------------------------------------------------------------------------
+Offset:              45.973ns (Levels of Logic = 52)
+  Source:            RST (PAD)
+  Destination:       XLXI_4/regDI_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: RST to XLXI_4/regDI_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           258   1.218   1.369  RST_IBUF (RST_IBUF)
+     LUT4:I2->O           14   0.704   1.175  XLXI_2/Mmux_GameTimeLeft_mux000161 (XLXN_8<2>)
+     LUT3:I0->O            6   0.704   0.844  XLXI_3/Msub_sub0001_sub0000_xor<5>111 (XLXI_3/N43)
+     LUT3:I0->O            1   0.704   0.000  XLXI_3/Msub_sub0002_sub0000_lut<6> (XLXI_3/Msub_sub0002_sub0000_lut<6>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_3/Msub_sub0002_sub0000_cy<6> (XLXI_3/Msub_sub0002_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_3/Msub_sub0002_sub0000_cy<7> (XLXI_3/Msub_sub0002_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_3/Msub_sub0002_sub0000_cy<8> (XLXI_3/Msub_sub0002_sub0000_cy<8>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_3/Msub_sub0002_sub0000_cy<9> (XLXI_3/Msub_sub0002_sub0000_cy<9>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0002_sub0000_xor<10> (XLXI_3/sub0002_sub0000<10>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0003_sub0000_lut<10>_INV_0 (XLXI_3/Msub_sub0003_sub0000_lut<10>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0003_sub0000_cy<10> (XLXI_3/Msub_sub0003_sub0000_cy<10>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0003_sub0000_xor<11> (XLXI_3/sub0003_sub0000<11>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0004_sub0000_lut<11>_INV_0 (XLXI_3/Msub_sub0004_sub0000_lut<11>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0004_sub0000_cy<11> (XLXI_3/Msub_sub0004_sub0000_cy<11>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0004_sub0000_xor<12> (XLXI_3/sub0004_sub0000<12>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0005_sub0000_lut<12>_INV_0 (XLXI_3/Msub_sub0005_sub0000_lut<12>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0005_sub0000_cy<12> (XLXI_3/Msub_sub0005_sub0000_cy<12>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0005_sub0000_xor<13> (XLXI_3/sub0005_sub0000<13>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0006_sub0000_lut<13>_INV_0 (XLXI_3/Msub_sub0006_sub0000_lut<13>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0006_sub0000_cy<13> (XLXI_3/Msub_sub0006_sub0000_cy<13>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0006_sub0000_xor<14> (XLXI_3/sub0006_sub0000<14>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0007_sub0000_lut<14>_INV_0 (XLXI_3/Msub_sub0007_sub0000_lut<14>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0007_sub0000_cy<14> (XLXI_3/Msub_sub0007_sub0000_cy<14>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0007_sub0000_xor<15> (XLXI_3/sub0007_sub0000<15>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0008_sub0000_lut<15>_INV_0 (XLXI_3/Msub_sub0008_sub0000_lut<15>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0008_sub0000_cy<15> (XLXI_3/Msub_sub0008_sub0000_cy<15>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0008_sub0000_xor<16> (XLXI_3/sub0008_sub0000<16>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0009_sub0000_lut<16>_INV_0 (XLXI_3/Msub_sub0009_sub0000_lut<16>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0009_sub0000_cy<16> (XLXI_3/Msub_sub0009_sub0000_cy<16>)
+     XORCY:CI->O           3   0.804   0.531  XLXI_3/Msub_sub0009_sub0000_xor<17> (XLXI_3/sub0009_sub0000<17>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Msub_sub0010_sub0000_lut<17>_INV_0 (XLXI_3/Msub_sub0010_sub0000_lut<17>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_3/Msub_sub0010_sub0000_cy<17> (XLXI_3/Msub_sub0010_sub0000_cy<17>)
+     XORCY:CI->O           1   0.804   0.420  XLXI_3/Msub_sub0010_sub0000_xor<18> (XLXI_3/sub0010_sub0000<18>)
+     INV:I->O              1   0.704   0.000  XLXI_3/Mcompar_R_cmp_le0011_lut<8>1_INV_0 (XLXI_3/Mcompar_R_cmp_le0011_lut<8>)
+     MUXCY:S->O            3   0.864   0.535  XLXI_3/Mcompar_R_cmp_le0011_cy<8> (XLXI_3/R_cmp_le0011)
+     LUT4:I3->O            1   0.704   0.499  XLXI_3/R_mux0000<3>106_SW0 (N139)
+     LUT4:I1->O            1   0.704   0.499  XLXI_3/R_mux0000<3>106 (XLXI_3/R_mux0000<3>106)
+     LUT4:I1->O            1   0.704   0.499  XLXI_3/R_mux0000<3>152 (XLXI_3/R_mux0000<3>152)
+     LUT4:I1->O            1   0.704   0.499  XLXI_3/R_mux0000<3>201 (XLXI_3/R_mux0000<3>201)
+     LUT4:I1->O            1   0.704   0.424  XLXI_3/R_mux0000<3>250 (XLXI_3/R_mux0000<3>250)
+     LUT4:I3->O            1   0.704   0.000  XLXI_3/R_mux0000<3>378_SW02 (XLXI_3/R_mux0000<3>378_SW01)
+     MUXF5:I0->O           1   0.321   0.595  XLXI_3/R_mux0000<3>378_SW0_f5 (N155)
+     LUT4:I0->O            1   0.704   0.000  XLXI_3/R_mux0000<3>3782 (XLXI_3/R_mux0000<3>3782)
+     MUXF5:I0->O           1   0.321   0.424  XLXI_3/R_mux0000<3>378_f5 (XLXI_3/R_mux0000<3>378)
+     LUT4:I3->O            1   0.704   0.499  XLXI_3/R_mux0000<3>410 (XLXN_18<3>)
+     begin scope: 'XLXI_4'
+     LUT3:I1->O            1   0.704   0.000  Mmux_Digit_83 (Mmux_Digit_83)
+     MUXF5:I0->O           1   0.321   0.000  Mmux_Digit_6_f5_2 (Mmux_Digit_6_f53)
+     MUXF6:I0->O           1   0.521   0.000  Mmux_Digit_4_f6_2 (Mmux_Digit_4_f63)
+     MUXF7:I0->O           6   0.521   0.844  Mmux_Digit_2_f7_2 (Digit<3>)
+     LUT3_D:I0->O          1   0.704   0.424  Hex2ASCII<4>1 (Hex2ASCII<4>)
+     LUT4:I3->O            1   0.704   0.000  regDI_mux0001<7>1111 (regDI_mux0001<7>111)
+     FDS:D                     0.308          regDI_0
+    ----------------------------------------
+    Total                     45.973ns (32.176ns logic, 13.797ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/G1_Score_cmp_ge0000'
+  Total number of paths / destination ports: 1050329439810 / 35
+-------------------------------------------------------------------------
+Offset:              87.066ns (Levels of Logic = 177)
+  Source:            RST (PAD)
+  Destination:       XLXI_2/Score_1_31 (LATCH)
+  Destination Clock: XLXI_2/G1_Score_cmp_ge0000 falling
+
+  Data Path: RST to XLXI_2/Score_1_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           258   1.218   1.334  RST_IBUF (RST_IBUF)
+     INV:I->O             30   0.704   1.262  XLXI_2/ball_y_mux0007<0>11_INV_0 (XLXI_2/ball_y<0>_mand)
+     MULT_AND:I1->LO       0   0.741   0.000  XLXI_2/ball_y<5>_mand (XLXI_2/ball_y<5>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<5> (XLXI_2/Maddsub_ball_y_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<6> (XLXI_2/Maddsub_ball_y_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<7> (XLXI_2/Maddsub_ball_y_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<8> (XLXI_2/Maddsub_ball_y_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<9> (XLXI_2/Maddsub_ball_y_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<10> (XLXI_2/Maddsub_ball_y_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<11> (XLXI_2/Maddsub_ball_y_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<12> (XLXI_2/Maddsub_ball_y_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<13> (XLXI_2/Maddsub_ball_y_mux0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<14> (XLXI_2/Maddsub_ball_y_mux0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<15> (XLXI_2/Maddsub_ball_y_mux0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<16> (XLXI_2/Maddsub_ball_y_mux0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<17> (XLXI_2/Maddsub_ball_y_mux0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<18> (XLXI_2/Maddsub_ball_y_mux0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<19> (XLXI_2/Maddsub_ball_y_mux0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<20> (XLXI_2/Maddsub_ball_y_mux0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<21> (XLXI_2/Maddsub_ball_y_mux0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<22> (XLXI_2/Maddsub_ball_y_mux0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<23> (XLXI_2/Maddsub_ball_y_mux0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<24> (XLXI_2/Maddsub_ball_y_mux0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<25> (XLXI_2/Maddsub_ball_y_mux0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<26> (XLXI_2/Maddsub_ball_y_mux0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<27> (XLXI_2/Maddsub_ball_y_mux0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<28> (XLXI_2/Maddsub_ball_y_mux0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<29> (XLXI_2/Maddsub_ball_y_mux0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<30> (XLXI_2/Maddsub_ball_y_mux0000_cy<30>)
+     XORCY:CI->O           4   0.804   0.666  XLXI_2/Maddsub_ball_y_mux0000_xor<31> (XLXI_2/ball_y_mux0000<31>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004251 (XLXI_2/ball_y_mux0004<31>)
+     LUT2:I0->O            4   0.704   0.587  XLXI_2/ball_y_mux0005<31>1 (XLXI_2/ball_y_mux0005<31>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>1_INV_0 (XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>)
+     MUXCY:S->O           38   0.864   1.439  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_cy<10> (XLXI_2/BallDirection_0_cmp_ge0000)
+     LUT2:I0->O            3   0.704   0.566  XLXI_2/ball_y_mux0006<1>1 (XLXI_2/ball_y_mux0006<1>)
+     LUT3:I2->O            1   0.704   0.000  XLXI_2/Maddsub_ball_y_mux0000_lut<1> (XLXI_2/Maddsub_ball_y_mux0000_lut<1>)
+     XORCY:LI->O           3   0.527   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<1> (XLXI_2/ball_y_mux0000<1>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004121 (XLXI_2/ball_y_mux0004<1>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7>)
+     MUXCY:CI->O          36   0.331   1.342  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<8> (XLXI_2/BallDirection_0_cmp_le0000)
+     LUT2:I1->O            2   0.704   0.622  XLXI_2/ball_y_mux0005<3>1 (XLXI_2/ball_y_mux0005<3>)
+     LUT2:I0->O            6   0.704   0.748  XLXI_2/ball_y_mux0006<3>1 (XLXI_2/ball_y_mux0006<3>)
+     LUT2:I1->O            0   0.704   0.000  XLXI_2/ball_y_mux0007<3>1 (XLXN_7<3>)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<3> (XLXI_2/Maddsub_ball_y_mux0000_cy<3>)
+     XORCY:CI->O           3   0.804   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<4> (XLXI_2/ball_y_mux0000<4>)
+     LUT4:I1->O            1   0.704   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_lut<0> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<0> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<1> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<2> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<3> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<4> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<5> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<6> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.459   0.420  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7>)
+     INV:I->O              1   0.704   0.595  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7>_inv_INV_0 (XLXI_2/G2_Score_cmp_gt0000)
+     LUT2:I0->O           36   0.704   1.342  XLXI_2/G2_Score_and00001 (XLXI_2/G2_Score_and0000)
+     LUT2:I1->O           65   0.704   1.352  XLXI_2/Mmux_ball_x_mux00021101 (XLXI_2/N15)
+     LUT4:I1->O            1   0.704   0.000  XLXI_2/ball_x_mux0004<0>_inv1 (XLXI_2/ball_x_mux0004<0>_inv)
+     MUXF5:I1->O           2   0.321   0.447  XLXI_2/ball_x_mux0004<0>_inv_f5 (XLXI_2/ball_x_mux0004<0>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Madd_ball_x_addsub0000_lut<0>_INV_0 (XLXI_2/Madd_ball_x_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Madd_ball_x_addsub0000_cy<0> (XLXI_2/Madd_ball_x_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_ball_x_addsub0000_cy<1> (XLXI_2/Madd_ball_x_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_ball_x_addsub0000_cy<2> (XLXI_2/Madd_ball_x_addsub0000_cy<2>)
+     XORCY:CI->O           1   0.804   0.499  XLXI_2/Madd_ball_x_addsub0000_xor<3> (XLXI_2/ball_x_addsub0000<3>)
+     LUT3:I1->O            3   0.704   0.531  XLXI_2/Mmux_ball_x_mux0006521 (XLXI_2/ball_x_mux0006<3>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Msub_ball_x_addsub0001_lut<3>_INV_0 (XLXI_2/Msub_ball_x_addsub0001_lut<3>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<3> (XLXI_2/Msub_ball_x_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<4> (XLXI_2/Msub_ball_x_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<5> (XLXI_2/Msub_ball_x_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<6> (XLXI_2/Msub_ball_x_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<7> (XLXI_2/Msub_ball_x_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<8> (XLXI_2/Msub_ball_x_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<9> (XLXI_2/Msub_ball_x_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<10> (XLXI_2/Msub_ball_x_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<11> (XLXI_2/Msub_ball_x_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<12> (XLXI_2/Msub_ball_x_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<13> (XLXI_2/Msub_ball_x_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<14> (XLXI_2/Msub_ball_x_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<15> (XLXI_2/Msub_ball_x_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<16> (XLXI_2/Msub_ball_x_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<17> (XLXI_2/Msub_ball_x_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<18> (XLXI_2/Msub_ball_x_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<19> (XLXI_2/Msub_ball_x_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<20> (XLXI_2/Msub_ball_x_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<21> (XLXI_2/Msub_ball_x_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<22> (XLXI_2/Msub_ball_x_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<23> (XLXI_2/Msub_ball_x_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<24> (XLXI_2/Msub_ball_x_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<25> (XLXI_2/Msub_ball_x_addsub0001_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<26> (XLXI_2/Msub_ball_x_addsub0001_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<27> (XLXI_2/Msub_ball_x_addsub0001_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<28> (XLXI_2/Msub_ball_x_addsub0001_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<29> (XLXI_2/Msub_ball_x_addsub0001_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  XLXI_2/Msub_ball_x_addsub0001_xor<30> (XLXI_2/ball_x_addsub0001<30>)
+     LUT4:I1->O            1   0.704   0.595  XLXI_2/ball_x_mux0009<30>1 (XLXI_2/ball_x<30>)
+     LUT2:I0->O            1   0.704   0.000  XLXI_2/Maddsub_ball_x_mux0000_lut<30> (XLXI_2/Maddsub_ball_x_mux0000_lut<30>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<30> (XLXI_2/Maddsub_ball_x_mux0000_cy<30>)
+     XORCY:CI->O           5   0.804   0.808  XLXI_2/Maddsub_ball_x_mux0000_xor<31> (XLXI_2/ball_x_mux0000<31>)
+     LUT3:I0->O            1   0.704   0.424  XLXI_2/ball_x_mux0004<31>_inv1 (XLXI_2/ball_x_mux0004<31>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0000_lut<15> (XLXI_2/Mcompar_ball_x_cmp_eq0000_lut<15>)
+     MUXCY:S->O            1   0.864   0.595  XLXI_2/Mcompar_ball_x_cmp_eq0000_cy<15> (XLXI_2/Mcompar_ball_x_cmp_eq0000_cy<15>)
+     LUT3:I0->O           37   0.704   1.343  XLXI_2/N61 (XLXI_2/N6)
+     LUT4:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_x_mux0006226 (XLXI_2/ball_x_mux0006<0>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_lut<0> (XLXI_2/Mcompar_ball_x_cmp_eq0001_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<0> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<1> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<2> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<3> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<4> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<5> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<6> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<7> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<8> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<9> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<10> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<11> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<12> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<13> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<14> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<14>)
+     MUXCY:CI->O           2   0.459   0.622  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<15> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<15>)
+     LUT3_D:I0->LO         1   0.704   0.275  XLXI_2/BallDirection_2_mux000711 (N196)
+     LUT4:I0->O            1   0.704   0.595  XLXI_2/ball_x_mux0009<0>1 (XLXN_7<4>)
+     LUT2:I0->O            1   0.704   0.000  XLXI_2/Maddsub_ball_x_mux0000_lut<0> (XLXI_2/Maddsub_ball_x_mux0000_lut<0>)
+     XORCY:LI->O           3   0.527   0.531  XLXI_2/Maddsub_ball_x_mux0000_xor<0> (XLXI_2/ball_x_mux0000<0>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_lut<0>_INV_0 (XLXI_2/Mcompar_G2_Score_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<0> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<1> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<2> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<3> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<4> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<5> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<6> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<7> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<8> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<9> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<9>)
+     MUXCY:CI->O         159   0.331   1.477  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<10> (XLXI_2/G2_Score_cmp_le0000)
+     LUT2:I0->O            3   0.704   0.706  XLXI_2/Mmux_ball_x_mux0002121 (XLXI_2/ball_x_mux0002<1>)
+     LUT3:I0->O            1   0.704   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_lut<0> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<0> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<1> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<2> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<3> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<4> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<5> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<6> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<7> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<8> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<9> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<9>)
+     MUXCY:CI->O         131   0.331   1.372  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<10> (XLXI_2/G1_Score_cmp_ge0000)
+     LUT2:I1->O           43   0.704   1.441  XLXI_2/Mmux_ball_y_mux00041101 (XLXI_2/N3)
+     LUT4:I0->O            2   0.704   0.622  XLXI_2/ball_y_mux0005<0>1 (XLXI_2/ball_y_mux0005<0>)
+     LUT2:I0->O            3   0.704   0.531  XLXI_2/ball_y_mux0006<0>1 (XLXI_2/ball_y_mux0006<0>)
+     MULT_AND:I0->LO       0   0.741   0.000  XLXI_2/ball_y<0>_mand (XLXI_2/ball_y<0>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<0> (XLXI_2/Maddsub_ball_y_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<1> (XLXI_2/Maddsub_ball_y_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<2> (XLXI_2/Maddsub_ball_y_mux0000_cy<2>)
+     XORCY:CI->O           3   0.804   0.706  XLXI_2/Maddsub_ball_y_mux0000_xor<3> (XLXI_2/ball_y_mux0000<3>)
+     LUT2:I0->O            3   0.704   0.706  XLXI_2/Mmux_ball_y_mux0002261 (XLXI_2/ball_y_mux0002<3>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_lut<0> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<0> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<1> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<2> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<3> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<4> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<5> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<6> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.459   0.420  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<7> (XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<7>)
+     INV:I->O              1   0.704   0.595  XLXI_2/Mcompar_G1_Score_cmp_gt0000_cy<7>_inv_INV_0 (XLXI_2/G1_Score_cmp_gt0000)
+     LUT2:I0->O           36   0.704   1.263  XLXI_2/G1_Score_and00001 (XLXI_2/G1_Score_and0000)
+     LDE:GE                    0.555          XLXI_2/G1_Score_2
+    ----------------------------------------
+    Total                     87.066ns (54.102ns logic, 32.965ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/G2_Score_cmp_le0000'
+  Total number of paths / destination ports: 421610 / 35
+-------------------------------------------------------------------------
+Offset:              34.413ns (Levels of Logic = 64)
+  Source:            RST (PAD)
+  Destination:       XLXI_2/Score_2_31 (LATCH)
+  Destination Clock: XLXI_2/G2_Score_cmp_le0000 falling
+
+  Data Path: RST to XLXI_2/Score_2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           258   1.218   1.334  RST_IBUF (RST_IBUF)
+     INV:I->O             30   0.704   1.262  XLXI_2/ball_y_mux0007<0>11_INV_0 (XLXI_2/ball_y<0>_mand)
+     MULT_AND:I1->LO       0   0.741   0.000  XLXI_2/ball_y<5>_mand (XLXI_2/ball_y<5>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<5> (XLXI_2/Maddsub_ball_y_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<6> (XLXI_2/Maddsub_ball_y_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<7> (XLXI_2/Maddsub_ball_y_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<8> (XLXI_2/Maddsub_ball_y_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<9> (XLXI_2/Maddsub_ball_y_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<10> (XLXI_2/Maddsub_ball_y_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<11> (XLXI_2/Maddsub_ball_y_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<12> (XLXI_2/Maddsub_ball_y_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<13> (XLXI_2/Maddsub_ball_y_mux0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<14> (XLXI_2/Maddsub_ball_y_mux0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<15> (XLXI_2/Maddsub_ball_y_mux0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<16> (XLXI_2/Maddsub_ball_y_mux0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<17> (XLXI_2/Maddsub_ball_y_mux0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<18> (XLXI_2/Maddsub_ball_y_mux0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<19> (XLXI_2/Maddsub_ball_y_mux0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<20> (XLXI_2/Maddsub_ball_y_mux0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<21> (XLXI_2/Maddsub_ball_y_mux0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<22> (XLXI_2/Maddsub_ball_y_mux0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<23> (XLXI_2/Maddsub_ball_y_mux0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<24> (XLXI_2/Maddsub_ball_y_mux0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<25> (XLXI_2/Maddsub_ball_y_mux0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<26> (XLXI_2/Maddsub_ball_y_mux0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<27> (XLXI_2/Maddsub_ball_y_mux0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<28> (XLXI_2/Maddsub_ball_y_mux0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<29> (XLXI_2/Maddsub_ball_y_mux0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<30> (XLXI_2/Maddsub_ball_y_mux0000_cy<30>)
+     XORCY:CI->O           4   0.804   0.666  XLXI_2/Maddsub_ball_y_mux0000_xor<31> (XLXI_2/ball_y_mux0000<31>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004251 (XLXI_2/ball_y_mux0004<31>)
+     LUT2:I0->O            4   0.704   0.587  XLXI_2/ball_y_mux0005<31>1 (XLXI_2/ball_y_mux0005<31>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>1_INV_0 (XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>)
+     MUXCY:S->O           38   0.864   1.439  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_cy<10> (XLXI_2/BallDirection_0_cmp_ge0000)
+     LUT2:I0->O            3   0.704   0.566  XLXI_2/ball_y_mux0006<1>1 (XLXI_2/ball_y_mux0006<1>)
+     LUT3:I2->O            1   0.704   0.000  XLXI_2/Maddsub_ball_y_mux0000_lut<1> (XLXI_2/Maddsub_ball_y_mux0000_lut<1>)
+     XORCY:LI->O           3   0.527   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<1> (XLXI_2/ball_y_mux0000<1>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004121 (XLXI_2/ball_y_mux0004<1>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7>)
+     MUXCY:CI->O          36   0.331   1.342  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<8> (XLXI_2/BallDirection_0_cmp_le0000)
+     LUT2:I1->O            2   0.704   0.622  XLXI_2/ball_y_mux0005<3>1 (XLXI_2/ball_y_mux0005<3>)
+     LUT2:I0->O            6   0.704   0.748  XLXI_2/ball_y_mux0006<3>1 (XLXI_2/ball_y_mux0006<3>)
+     LUT2:I1->O            0   0.704   0.000  XLXI_2/ball_y_mux0007<3>1 (XLXN_7<3>)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<3> (XLXI_2/Maddsub_ball_y_mux0000_cy<3>)
+     XORCY:CI->O           3   0.804   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<4> (XLXI_2/ball_y_mux0000<4>)
+     LUT4:I1->O            1   0.704   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_lut<0> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<0> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<1> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<2> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<3> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<4> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<5> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<6> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.459   0.420  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7>)
+     INV:I->O              1   0.704   0.595  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7>_inv_INV_0 (XLXI_2/G2_Score_cmp_gt0000)
+     LUT2:I0->O           36   0.704   1.263  XLXI_2/G2_Score_and00001 (XLXI_2/G2_Score_and0000)
+     LDE:GE                    0.555          XLXI_2/G2_Score_2
+    ----------------------------------------
+    Total                     34.413ns (21.105ns logic, 13.308ns route)
+                                       (61.3% logic, 38.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/BallDirection_0_cmp_le0000'
+  Total number of paths / destination ports: 2408 / 1
+-------------------------------------------------------------------------
+Offset:              23.375ns (Levels of Logic = 49)
+  Source:            RST (PAD)
+  Destination:       XLXI_2/BallDirection_0 (LATCH)
+  Destination Clock: XLXI_2/BallDirection_0_cmp_le0000 falling
+
+  Data Path: RST to XLXI_2/BallDirection_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           258   1.218   1.334  RST_IBUF (RST_IBUF)
+     INV:I->O             30   0.704   1.262  XLXI_2/ball_y_mux0007<0>11_INV_0 (XLXI_2/ball_y<0>_mand)
+     MULT_AND:I1->LO       0   0.741   0.000  XLXI_2/ball_y<5>_mand (XLXI_2/ball_y<5>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<5> (XLXI_2/Maddsub_ball_y_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<6> (XLXI_2/Maddsub_ball_y_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<7> (XLXI_2/Maddsub_ball_y_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<8> (XLXI_2/Maddsub_ball_y_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<9> (XLXI_2/Maddsub_ball_y_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<10> (XLXI_2/Maddsub_ball_y_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<11> (XLXI_2/Maddsub_ball_y_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<12> (XLXI_2/Maddsub_ball_y_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<13> (XLXI_2/Maddsub_ball_y_mux0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<14> (XLXI_2/Maddsub_ball_y_mux0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<15> (XLXI_2/Maddsub_ball_y_mux0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<16> (XLXI_2/Maddsub_ball_y_mux0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<17> (XLXI_2/Maddsub_ball_y_mux0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<18> (XLXI_2/Maddsub_ball_y_mux0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<19> (XLXI_2/Maddsub_ball_y_mux0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<20> (XLXI_2/Maddsub_ball_y_mux0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<21> (XLXI_2/Maddsub_ball_y_mux0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<22> (XLXI_2/Maddsub_ball_y_mux0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<23> (XLXI_2/Maddsub_ball_y_mux0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<24> (XLXI_2/Maddsub_ball_y_mux0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<25> (XLXI_2/Maddsub_ball_y_mux0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<26> (XLXI_2/Maddsub_ball_y_mux0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<27> (XLXI_2/Maddsub_ball_y_mux0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<28> (XLXI_2/Maddsub_ball_y_mux0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<29> (XLXI_2/Maddsub_ball_y_mux0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<30> (XLXI_2/Maddsub_ball_y_mux0000_cy<30>)
+     XORCY:CI->O           4   0.804   0.666  XLXI_2/Maddsub_ball_y_mux0000_xor<31> (XLXI_2/ball_y_mux0000<31>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004251 (XLXI_2/ball_y_mux0004<31>)
+     LUT2:I0->O            4   0.704   0.587  XLXI_2/ball_y_mux0005<31>1 (XLXI_2/ball_y_mux0005<31>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>1_INV_0 (XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>)
+     MUXCY:S->O           38   0.864   1.439  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_cy<10> (XLXI_2/BallDirection_0_cmp_ge0000)
+     LUT2:I0->O            3   0.704   0.566  XLXI_2/ball_y_mux0006<1>1 (XLXI_2/ball_y_mux0006<1>)
+     LUT3:I2->O            1   0.704   0.000  XLXI_2/Maddsub_ball_y_mux0000_lut<1> (XLXI_2/Maddsub_ball_y_mux0000_lut<1>)
+     XORCY:LI->O           3   0.527   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<1> (XLXI_2/ball_y_mux0000<1>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004121 (XLXI_2/ball_y_mux0004<1>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7>)
+     MUXCY:CI->O          36   0.331   1.298  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<8> (XLXI_2/BallDirection_0_cmp_le0000)
+     LUT3:I2->O            1   0.704   0.000  XLXI_2/BallDirection_0_mux00031 (XLXI_2/BallDirection_0_mux0003)
+     LDCP:D                    0.308          XLXI_2/BallDirection_0
+    ----------------------------------------
+    Total                     23.375ns (14.369ns logic, 9.006ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/BallDirection_2_not0001'
+  Total number of paths / destination ports: 16635481092 / 1
+-------------------------------------------------------------------------
+Offset:              72.408ns (Levels of Logic = 158)
+  Source:            RST (PAD)
+  Destination:       XLXI_2/BallDirection_2 (LATCH)
+  Destination Clock: XLXI_2/BallDirection_2_not0001 falling
+
+  Data Path: RST to XLXI_2/BallDirection_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           258   1.218   1.334  RST_IBUF (RST_IBUF)
+     INV:I->O             30   0.704   1.262  XLXI_2/ball_y_mux0007<0>11_INV_0 (XLXI_2/ball_y<0>_mand)
+     MULT_AND:I1->LO       0   0.741   0.000  XLXI_2/ball_y<5>_mand (XLXI_2/ball_y<5>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<5> (XLXI_2/Maddsub_ball_y_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<6> (XLXI_2/Maddsub_ball_y_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<7> (XLXI_2/Maddsub_ball_y_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<8> (XLXI_2/Maddsub_ball_y_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<9> (XLXI_2/Maddsub_ball_y_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<10> (XLXI_2/Maddsub_ball_y_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<11> (XLXI_2/Maddsub_ball_y_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<12> (XLXI_2/Maddsub_ball_y_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<13> (XLXI_2/Maddsub_ball_y_mux0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<14> (XLXI_2/Maddsub_ball_y_mux0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<15> (XLXI_2/Maddsub_ball_y_mux0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<16> (XLXI_2/Maddsub_ball_y_mux0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<17> (XLXI_2/Maddsub_ball_y_mux0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<18> (XLXI_2/Maddsub_ball_y_mux0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<19> (XLXI_2/Maddsub_ball_y_mux0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<20> (XLXI_2/Maddsub_ball_y_mux0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<21> (XLXI_2/Maddsub_ball_y_mux0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<22> (XLXI_2/Maddsub_ball_y_mux0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<23> (XLXI_2/Maddsub_ball_y_mux0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<24> (XLXI_2/Maddsub_ball_y_mux0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<25> (XLXI_2/Maddsub_ball_y_mux0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<26> (XLXI_2/Maddsub_ball_y_mux0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<27> (XLXI_2/Maddsub_ball_y_mux0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<28> (XLXI_2/Maddsub_ball_y_mux0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<29> (XLXI_2/Maddsub_ball_y_mux0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<30> (XLXI_2/Maddsub_ball_y_mux0000_cy<30>)
+     XORCY:CI->O           4   0.804   0.666  XLXI_2/Maddsub_ball_y_mux0000_xor<31> (XLXI_2/ball_y_mux0000<31>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004251 (XLXI_2/ball_y_mux0004<31>)
+     LUT2:I0->O            4   0.704   0.587  XLXI_2/ball_y_mux0005<31>1 (XLXI_2/ball_y_mux0005<31>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>1_INV_0 (XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_lut<10>)
+     MUXCY:S->O           38   0.864   1.439  XLXI_2/Mcompar_BallDirection_0_cmp_ge0000_cy<10> (XLXI_2/BallDirection_0_cmp_ge0000)
+     LUT2:I0->O            3   0.704   0.566  XLXI_2/ball_y_mux0006<1>1 (XLXI_2/ball_y_mux0006<1>)
+     LUT3:I2->O            1   0.704   0.000  XLXI_2/Maddsub_ball_y_mux0000_lut<1> (XLXI_2/Maddsub_ball_y_mux0000_lut<1>)
+     XORCY:LI->O           3   0.527   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<1> (XLXI_2/ball_y_mux0000<1>)
+     LUT3:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_y_mux0004121 (XLXI_2/ball_y_mux0004<1>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7> (XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<7>)
+     MUXCY:CI->O          36   0.331   1.342  XLXI_2/Mcompar_BallDirection_0_cmp_le0000_cy<8> (XLXI_2/BallDirection_0_cmp_le0000)
+     LUT2:I1->O            2   0.704   0.622  XLXI_2/ball_y_mux0005<3>1 (XLXI_2/ball_y_mux0005<3>)
+     LUT2:I0->O            6   0.704   0.748  XLXI_2/ball_y_mux0006<3>1 (XLXI_2/ball_y_mux0006<3>)
+     LUT2:I1->O            0   0.704   0.000  XLXI_2/ball_y_mux0007<3>1 (XLXN_7<3>)
+     MUXCY:DI->O           1   0.888   0.000  XLXI_2/Maddsub_ball_y_mux0000_cy<3> (XLXI_2/Maddsub_ball_y_mux0000_cy<3>)
+     XORCY:CI->O           3   0.804   0.610  XLXI_2/Maddsub_ball_y_mux0000_xor<4> (XLXI_2/ball_y_mux0000<4>)
+     LUT4:I1->O            1   0.704   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_lut<0> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<0> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<1> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<2> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<3> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<4> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<5> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<6> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.459   0.420  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7> (XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7>)
+     INV:I->O              1   0.704   0.595  XLXI_2/Mcompar_G2_Score_cmp_gt0000_cy<7>_inv_INV_0 (XLXI_2/G2_Score_cmp_gt0000)
+     LUT2:I0->O           36   0.704   1.342  XLXI_2/G2_Score_and00001 (XLXI_2/G2_Score_and0000)
+     LUT2:I1->O           65   0.704   1.352  XLXI_2/Mmux_ball_x_mux00021101 (XLXI_2/N15)
+     LUT4:I1->O            1   0.704   0.000  XLXI_2/ball_x_mux0004<0>_inv1 (XLXI_2/ball_x_mux0004<0>_inv)
+     MUXF5:I1->O           2   0.321   0.447  XLXI_2/ball_x_mux0004<0>_inv_f5 (XLXI_2/ball_x_mux0004<0>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Madd_ball_x_addsub0000_lut<0>_INV_0 (XLXI_2/Madd_ball_x_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Madd_ball_x_addsub0000_cy<0> (XLXI_2/Madd_ball_x_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_ball_x_addsub0000_cy<1> (XLXI_2/Madd_ball_x_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_ball_x_addsub0000_cy<2> (XLXI_2/Madd_ball_x_addsub0000_cy<2>)
+     XORCY:CI->O           1   0.804   0.499  XLXI_2/Madd_ball_x_addsub0000_xor<3> (XLXI_2/ball_x_addsub0000<3>)
+     LUT3:I1->O            3   0.704   0.531  XLXI_2/Mmux_ball_x_mux0006521 (XLXI_2/ball_x_mux0006<3>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Msub_ball_x_addsub0001_lut<3>_INV_0 (XLXI_2/Msub_ball_x_addsub0001_lut<3>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<3> (XLXI_2/Msub_ball_x_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<4> (XLXI_2/Msub_ball_x_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<5> (XLXI_2/Msub_ball_x_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<6> (XLXI_2/Msub_ball_x_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<7> (XLXI_2/Msub_ball_x_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<8> (XLXI_2/Msub_ball_x_addsub0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<9> (XLXI_2/Msub_ball_x_addsub0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<10> (XLXI_2/Msub_ball_x_addsub0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<11> (XLXI_2/Msub_ball_x_addsub0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<12> (XLXI_2/Msub_ball_x_addsub0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<13> (XLXI_2/Msub_ball_x_addsub0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<14> (XLXI_2/Msub_ball_x_addsub0001_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<15> (XLXI_2/Msub_ball_x_addsub0001_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<16> (XLXI_2/Msub_ball_x_addsub0001_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<17> (XLXI_2/Msub_ball_x_addsub0001_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<18> (XLXI_2/Msub_ball_x_addsub0001_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<19> (XLXI_2/Msub_ball_x_addsub0001_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<20> (XLXI_2/Msub_ball_x_addsub0001_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<21> (XLXI_2/Msub_ball_x_addsub0001_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<22> (XLXI_2/Msub_ball_x_addsub0001_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<23> (XLXI_2/Msub_ball_x_addsub0001_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<24> (XLXI_2/Msub_ball_x_addsub0001_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<25> (XLXI_2/Msub_ball_x_addsub0001_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<26> (XLXI_2/Msub_ball_x_addsub0001_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<27> (XLXI_2/Msub_ball_x_addsub0001_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<28> (XLXI_2/Msub_ball_x_addsub0001_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Msub_ball_x_addsub0001_cy<29> (XLXI_2/Msub_ball_x_addsub0001_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  XLXI_2/Msub_ball_x_addsub0001_xor<30> (XLXI_2/ball_x_addsub0001<30>)
+     LUT4:I1->O            1   0.704   0.595  XLXI_2/ball_x_mux0009<30>1 (XLXI_2/ball_x<30>)
+     LUT2:I0->O            1   0.704   0.000  XLXI_2/Maddsub_ball_x_mux0000_lut<30> (XLXI_2/Maddsub_ball_x_mux0000_lut<30>)
+     MUXCY:S->O            0   0.464   0.000  XLXI_2/Maddsub_ball_x_mux0000_cy<30> (XLXI_2/Maddsub_ball_x_mux0000_cy<30>)
+     XORCY:CI->O           5   0.804   0.808  XLXI_2/Maddsub_ball_x_mux0000_xor<31> (XLXI_2/ball_x_mux0000<31>)
+     LUT3:I0->O            1   0.704   0.424  XLXI_2/ball_x_mux0004<31>_inv1 (XLXI_2/ball_x_mux0004<31>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0000_lut<15> (XLXI_2/Mcompar_ball_x_cmp_eq0000_lut<15>)
+     MUXCY:S->O            1   0.864   0.595  XLXI_2/Mcompar_ball_x_cmp_eq0000_cy<15> (XLXI_2/Mcompar_ball_x_cmp_eq0000_cy<15>)
+     LUT3:I0->O           37   0.704   1.343  XLXI_2/N61 (XLXI_2/N6)
+     LUT4:I1->O            2   0.704   0.622  XLXI_2/Mmux_ball_x_mux0006226 (XLXI_2/ball_x_mux0006<0>)
+     LUT4:I0->O            1   0.704   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_lut<0> (XLXI_2/Mcompar_ball_x_cmp_eq0001_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<0> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<1> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<2> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<3> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<4> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<5> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<6> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<7> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<8> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<9> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<10> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<11> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<12> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<13> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<14> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<14>)
+     MUXCY:CI->O           2   0.459   0.622  XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<15> (XLXI_2/Mcompar_ball_x_cmp_eq0001_cy<15>)
+     LUT3_D:I0->LO         1   0.704   0.275  XLXI_2/BallDirection_2_mux000711 (N196)
+     LUT4:I0->O            1   0.704   0.595  XLXI_2/ball_x_mux0009<0>1 (XLXN_7<4>)
+     LUT2:I0->O            1   0.704   0.000  XLXI_2/Maddsub_ball_x_mux0000_lut<0> (XLXI_2/Maddsub_ball_x_mux0000_lut<0>)
+     XORCY:LI->O           3   0.527   0.531  XLXI_2/Maddsub_ball_x_mux0000_xor<0> (XLXI_2/ball_x_mux0000<0>)
+     INV:I->O              1   0.704   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_lut<0>_INV_0 (XLXI_2/Mcompar_G2_Score_cmp_le0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<0> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<1> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<2> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<3> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<4> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<5> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<6> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<7> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<8> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<9> (XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<9>)
+     MUXCY:CI->O         159   0.331   1.477  XLXI_2/Mcompar_G2_Score_cmp_le0000_cy<10> (XLXI_2/G2_Score_cmp_le0000)
+     LUT2:I0->O            3   0.704   0.706  XLXI_2/Mmux_ball_x_mux0002121 (XLXI_2/ball_x_mux0002<1>)
+     LUT3:I0->O            1   0.704   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_lut<0> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<0> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<1> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<2> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<3> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<4> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<5> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<6> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<7> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<8> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<9> (XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<9>)
+     MUXCY:CI->O         131   0.331   1.297  XLXI_2/Mcompar_G1_Score_cmp_ge0000_cy<10> (XLXI_2/G1_Score_cmp_ge0000)
+     LUT4:I3->O            1   0.704   0.000  XLXI_2/BallDirection_2_mux0007 (XLXI_2/BallDirection_2_mux0007)
+     LD:D                      0.308          XLXI_2/BallDirection_2
+    ----------------------------------------
+    Total                     72.408ns (45.803ns logic, 26.605ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 31 / 12
+-------------------------------------------------------------------------
+Offset:              5.998ns (Levels of Logic = 3)
+  Source:            XLXI_4/State_20 (FF)
+  Destination:       LCD_RW (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: XLXI_4/State_20 to LCD_RW
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q            4   0.591   0.762  State_20 (State<20>)
+     LUT2:I0->O            6   0.704   0.669  T_or00001 (LCD_RW)
+     end scope: 'XLXI_4'
+     OBUF:I->O                 3.272          LCD_RW_OBUF (LCD_RW)
+    ----------------------------------------
+    Total                      5.998ns (4.567ns logic, 1.431ns route)
+                                       (76.1% logic, 23.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 21.25 secs
+ 
 --> 
 
-Total memory usage is 4524388 kilobytes
+Total memory usage is 4589328 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

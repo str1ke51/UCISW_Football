@@ -72,18 +72,6 @@ architecture Behavioral of Displayer is
 		end loop;
 		return R;
 	end MODULO;
-	
-	function DIVIDE_BY_TEN (X : integer)
-		return integer is
-		variable counter : integer := 0;
-		variable R : integer := X;
-	begin
-		while R > 10 loop
-			R := R - 10;
-			counter := counter + 1;
-		end loop;
-		return counter;
-	end DIVIDE_BY_TEN;
 
 -- Zmienne do ekranu LCD
 	shared variable Seconds_Left : integer := to_integer(signed(Time_Left));
@@ -107,11 +95,12 @@ begin
 		Line(42 downto 40) <= G2_Score;
 		
 		Seconds_Left := to_integer(signed(Time_Left));
+		
 		Seconds := MODULO(Seconds_Left, 60);
 		Minutes := DIVIDE(Seconds_Left, 60);
 		
-		--Seconds_One := MODULO(Seconds, 10);
-		Seconds_Ten := DIVIDE_BY_TEN(Seconds);
+		Seconds_One := MODULO(Seconds, 10);
+		Seconds_Ten := DIVIDE(Seconds, 10);
 		
 		Seconds_Ten_Display := std_logic_vector(to_unsigned(Seconds_Ten, 4));
 		Seconds_One_Display := std_logic_vector(to_unsigned(Seconds_One, 4));

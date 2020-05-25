@@ -1,21 +1,21 @@
 V3 16
-FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd 2020/05/24.21:34:28 P.20131013
-EN work/Displayer 1590348890 \
+FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd 2020/05/25.09:41:28 P.20131013
+EN work/Displayer 1590392509 \
       FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Displayer/Behavioral 1590348891 \
-      FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd EN work/Displayer 1590348890
-FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf 2020/05/24.21:34:45 P.20131013
-EN work/Football 1590348892 FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf \
+AR work/Displayer/Behavioral 1590392510 \
+      FL D:/Stuff/Programowanie/UCISW_Football/Displayer.vhd EN work/Displayer 1590392509
+FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf 2020/05/25.09:41:44 P.20131013
+EN work/Football 1590392511 FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/Football/BEHAVIORAL 1590348893 \
-      FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf EN work/Football 1590348892 \
+AR work/Football/BEHAVIORAL 1590392512 \
+      FL D:/Stuff/Programowanie/UCISW_Football/Football.vhf EN work/Football 1590392511 \
       CP PS2_Rx CP GameManager CP Displayer CP LCD1x64 CP VGAtxt48x20 CP BUF
 FL D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd 2020/05/24.20:10:05 P.20131013
-EN work/GameManager 1590348888 \
+EN work/GameManager 1590392507 \
       FL D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/GameManager/Behavioral 1590348889 \
+AR work/GameManager/Behavioral 1590392508 \
       FL D:/Stuff/Programowanie/UCISW_Football/GameManager.vhd \
-      EN work/GameManager 1590348888
+      EN work/GameManager 1590392507

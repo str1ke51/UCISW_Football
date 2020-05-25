@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Football.vhf
--- /___/   /\     Timestamp : 05/24/2020 21:34:45
+-- /___/   /\     Timestamp : 05/25/2020 09:41:43
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
