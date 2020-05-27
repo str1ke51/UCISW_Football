@@ -77,7 +77,6 @@ shared variable BallDirection : std_logic_vector (2 downto 0) := START_BALL_DIRE
 shared variable ball_x : integer := START_BALL_X;
 shared variable ball_y : integer := START_BALL_Y;
 	
-signal IsGameEnded : bit := '0';
 signal SecondElapsed : bit := '0';
 signal ChangeBallPostion : bit := '0';
 

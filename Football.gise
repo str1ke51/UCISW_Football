@@ -61,6 +61,7 @@
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Football_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Football_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Football_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="GameManager.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="GameManager.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -107,14 +108,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="Football.jhd"/>
       <outfile xil_pn:name="Football.lso"/>
-      <outfile xil_pn:name="Football.ngc"/>
-      <outfile xil_pn:name="Football.ngr"/>
       <outfile xil_pn:name="Football.prj"/>
-      <outfile xil_pn:name="Football.stx"/>
       <outfile xil_pn:name="Football.syr"/>
       <outfile xil_pn:name="Football.xst"/>
       <outfile xil_pn:name="Football_vhdl.prj"/>
@@ -130,47 +131,40 @@
     <transform xil_pn:end_ts="1590392536" xil_pn:in_ck="7887878491558071283" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3437739226570266581" xil_pn:start_ts="1590392529">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Football.bld"/>
-      <outfile xil_pn:name="Football.ngd"/>
-      <outfile xil_pn:name="Football_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590392545" xil_pn:in_ck="3713271847729846810" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1590392536">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Football.pcf"/>
-      <outfile xil_pn:name="Football_map.map"/>
-      <outfile xil_pn:name="Football_map.mrp"/>
-      <outfile xil_pn:name="Football_map.ncd"/>
-      <outfile xil_pn:name="Football_map.ngm"/>
-      <outfile xil_pn:name="Football_map.xrpt"/>
-      <outfile xil_pn:name="Football_summary.xml"/>
-      <outfile xil_pn:name="Football_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590392671" xil_pn:in_ck="3424169622871320115" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-3872219738485705569" xil_pn:start_ts="1590392545">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Football.ncd"/>
-      <outfile xil_pn:name="Football.pad"/>
-      <outfile xil_pn:name="Football.par"/>
-      <outfile xil_pn:name="Football.ptwx"/>
-      <outfile xil_pn:name="Football.unroutes"/>
-      <outfile xil_pn:name="Football.xpi"/>
-      <outfile xil_pn:name="Football_pad.csv"/>
-      <outfile xil_pn:name="Football_pad.txt"/>
-      <outfile xil_pn:name="Football_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1590392671" xil_pn:in_ck="3713271847729846678" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1590392665">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Football.twr"/>
-      <outfile xil_pn:name="Football.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

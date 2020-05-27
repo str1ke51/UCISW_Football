@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="GameManager">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2020-5-24T18:8:33</timestamp>
+    <timestamp>2020-5-27T13:31:40</timestamp>
     <pin polarity="Input" x="0" y="-416" name="Data_Ready" />
     <pin polarity="Input" x="0" y="-288" name="Clk_XT" />
     <pin polarity="Input" x="0" y="-160" name="RST" />
